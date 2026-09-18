@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuidados e afiação · Corte Nobre</title>
+<meta name="description" content="Como conservar uma faca artesanal de aço carbono ou inox: secagem, lubrificação, pontos de oxidação, ângulo de afiação e cuidados com facas douradas e black fosfatizada.">
+<meta name="theme-color" content="#17150F">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cuidados e afiação · Corte Nobre">
+<meta property="og:description" content="A orientação de uso e conservação que sai impressa dentro de cada caixa.">
+<meta property="og:image" content="https://corte-nobre.vercel.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Work+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/base.css?v=mu6d5rxz">
+<link rel="stylesheet" href="css/app.css?v=mu6d5rxz">
+<link rel="stylesheet" href="css/home.css?v=mu6d5rxz">
+<link rel="stylesheet" href="css/catalogo.css?v=mu6d5rxz">
+<script type="module" src="js/app.js"></script>
+<script type="module" src="js/cuidados.js"></script>
+</head>
+<body>
+<div class="cortina" aria-hidden="true"><img src="img/selo-osso.webp" alt="" width="46" height="46"></div>
+<div class="grao" aria-hidden="true"></div>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<div class="progresso" aria-hidden="true"></div>
+
+<header class="cabecalho solto">
+  <div class="cabecalho-linha">
+    <a class="marca" href="/" aria-label="Corte Nobre, página inicial">
+      <img src="img/assinatura-osso.webp" alt="Corte Nobre" width="140" height="43">
+    </a>
+
+    <nav class="nav" aria-label="Principal">
+      <a href="faca-de-inox.html" data-pagina="inox">Aço inox</a>
+      <a href="faca-de-carbono.html" data-pagina="carbono">Aço carbono</a>
+      <a href="empresarial.html" data-pagina="empresarial">Empresarial</a>
+      <a href="cuidados.html" data-pagina="cuidados" aria-current="page">Cuidados</a>
+      <a href="contato.html" data-pagina="contato">Contato</a>
+    </nav>
+
+    <div class="acoes">
+      <a class="btn-sacola" href="sacola.html" data-cheia="0">
+        <svg width="14" height="16" viewBox="0 0 14 16" fill="none" aria-hidden="true"><path d="M1 4.5h12V15H1V4.5zM4.5 6V3.5a2.5 2.5 0 015 0V6" stroke="currentColor"/></svg>
+        <span class="rotulo">Sacola</span>
+        <span class="contador">0</span>
+      </a>
+      <button class="btn-menu" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <nav class="menu-itens" aria-label="Menu">
+    <a href="/" style="--i:0"><span>Início</span></a>
+    <a href="faca-de-inox.html" style="--i:1"><span>Aço inox</span></a>
+    <a href="faca-de-carbono.html" style="--i:2"><span>Aço carbono</span></a>
+    <a href="empresarial.html" style="--i:3"><span>Empresarial</span></a>
+    <a href="cuidados.html" style="--i:4"><span>Cuidados</span></a>
+    <a href="contato.html" style="--i:5"><span>Contato</span></a>
+  </nav>
+  <div class="menu-rodape">
+    <a class="link-fio" data-contato="whatsapp-link" href="#">Chamar no WhatsApp</a>
+    <a class="link-fio" data-contato="email" href="#">contato</a>
+    <a class="link-fio" data-contato="instagram" href="#">instagram</a>
+  </div>
+</div>
+
+<main id="conteudo">
+
+  <section class="topo-pagina">
+    <div class="wrap">
+      <div class="topo-grid">
+        <div>
+          <p class="kicker">Uso e conservação</p>
+          <h1>A orientação que vai dentro da caixa</h1>
+          <p class="lead">Toda peça sai da oficina com este cartão. Ele está aqui inteiro, para você saber o que cada aço pede antes mesmo de comprar.</p>
+        </div>
+        <figure class="topo-foto" data-reveal>
+          <img src="img/cartao-conservacao.webp" srcset="img/cartao-conservacao@half.webp 700w, img/cartao-conservacao.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" alt="Cartão de orientação de uso e conservação que acompanha cada faca" width="1200" height="2133" loading="eager">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" style="padding-top:clamp(36px,4vw,56px)">
+    <div class="wrap">
+      <div class="abas" role="tablist" aria-label="Cuidados por tipo de aço" data-abas></div>
+      <div id="abas-conteudo"></div>
+    </div>
+  </section>
+
+  <section class="secao" style="background:var(--carbono-fundo);border-block:1px solid var(--linha)">
+    <div class="wrap">
+      <div class="duas">
+        <div>
+          <p class="kicker" data-reveal style="margin-bottom:18px">Afiação</p>
+          <h2 class="titulo-secao" data-reveal>O fio volta com facilidade</h2>
+          <p class="corpo" data-reveal style="margin-top:18px">O ângulo muda conforme o aço. No carbono, 12° por lado, em pedra d'água, sem retirar têmpera. No inox, de 15° a 20° com chaira, passando a mesma quantidade de vezes de cada lado.</p>
+          <button class="btn btn-secundario" data-whatsapp="Olá! Tenho uma dúvida sobre afiação de uma faca Corte Nobre." data-reveal type="button" style="margin-top:28px">Tirar dúvida de afiação</button>
+        </div>
+        <dl class="lista-marcada" data-escala="80">
+          <div data-reveal><dt>Carbono</dt><dd>Chaira estriada, pedra de afiação ou lixa, tranquilamente, sempre que achar necessário.</dd></div>
+          <div data-reveal><dt>Inox</dt><dd>Chaira em ângulo de 15° a 20°. Sem prática, procure um profissional: o acabamento brilhante marca fácil.</dd></div>
+          <div data-reveal><dt>Bainha</dt><dd>Serve para o transporte. Guardar a peça dentro dela por muito tempo acelera a oxidação.</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao chamada">
+    <div class="wrap">
+      <p class="kicker" data-reveal style="margin-bottom:22px">Ficou com dúvida</p>
+      <h2 class="titulo-secao" data-reveal>Quem responde é quem forja</h2>
+      <div class="chamada-acoes" data-reveal>
+        <button class="btn btn-primario" data-whatsapp="Olá! Vim pela página de cuidados do site da Corte Nobre." data-imanta type="button">Chamar no WhatsApp</button>
+        <a class="btn btn-secundario" href="faca-de-carbono.html">Ver a linha de carbono</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <div class="wrap">
+    <div class="rodape-grid">
+      <div class="rodape-marca">
+        <img src="img/assinatura-osso.webp" alt="Corte Nobre" width="128" height="39" loading="lazy">
+        <p class="corpo" style="font-size:15px;max-width:34ch">Facas forjadas, moídas e temperadas à mão, uma de cada vez.</p>
+      </div>
+      <div>
+        <h3>Catálogo</h3>
+        <ul>
+          <li><a class="link-fio" href="faca-de-inox.html">Aço inox</a></li>
+          <li><a class="link-fio" href="faca-de-carbono.html">Aço carbono</a></li>
+          <li><a class="link-fio" href="empresarial.html">Empresarial</a></li>
+          <li><a class="link-fio" href="sacola.html">Sacola</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>A marca</h3>
+        <ul>
+          <li><a class="link-fio" href="index.html#oficio">O ofício</a></li>
+          <li><a class="link-fio" href="index.html#acos">Aços e cabos</a></li>
+          <li><a class="link-fio" href="cuidados.html">Cuidados e afiação</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Atendimento</h3>
+        <ul>
+          <li><a class="link-fio" data-contato="whatsapp-link" href="#" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a class="link-fio" data-contato="email" href="#">e-mail</a></li>
+          <li><a class="link-fio" data-contato="instagram" href="#" target="_blank" rel="noopener">instagram</a></li>
+          <li><a class="link-fio" href="contato.html">Falar com a oficina</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="rodape-base">
+      <span>Corte Nobre · Facas artesanais</span>
+      <span>© <span data-ano>2026</span> · todos os direitos reservados</span>
+    </div>
+  </div>
+</footer>
+<button class="zap" type="button" data-whatsapp="Olá! Vim pelo site da Corte Nobre." aria-label="Falar no WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.7 14.9L2 22l5.3-1.4A10 10 0 1012 2zm0 18.1c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.1 8.1 0 1112 20.1zm4.5-5.9c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.6 6.6 0 01-3.3-2.9c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1 1.9-.6 3.1a11 11 0 004.3 4.6c1.6.8 2.7.7 3.5.6.5-.1 1.4-.6 1.6-1.2.2-.6.2-1 .1-1.1l-.3-.1z"/></svg>
+</button>
+<div class="veu" aria-hidden="true"></div>
+
+<aside class="painel" id="painel-sacola" aria-hidden="true" aria-label="Sacola">
+  <div class="painel-topo">
+    <h2 class="titulo" style="font-size:20px">Sua sacola</h2>
+    <button class="fechar" type="button" aria-label="Fechar sacola">
+      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M1 1l13 13M14 1L1 14" stroke="currentColor"/></svg>
+    </button>
+  </div>
+  <div class="painel-corpo" id="sacola-corpo"></div>
+  <div class="painel-pe" id="sacola-pe" hidden>
+    <div class="total-linha">
+      <span class="legenda">Total das peças</span>
+      <strong class="total-valor" id="sacola-total">R$ 0,00</strong>
+    </div>
+    <p class="legenda" id="sacola-nota" style="margin-bottom:16px"></p>
+    <button class="btn btn-primario" id="fechar-pedido" type="button" style="width:100%">Fechar pedido no WhatsApp</button>
+  </div>
+</aside>
+
+<aside class="painel painel-largo" id="painel-ficha" aria-hidden="true" aria-label="Peça">
+  <div class="painel-topo">
+    <span class="kicker sem-fio">Peça</span>
+    <button class="fechar" type="button" aria-label="Fechar">
+      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M1 1l13 13M14 1L1 14" stroke="currentColor"/></svg>
+    </button>
+  </div>
+  <div class="painel-corpo" id="ficha-conteudo"></div>
+  <div class="painel-pe">
+    <div class="total-linha">
+      <span class="legenda">Valor da peça</span>
+      <strong class="total-valor" id="ficha-preco">R$ 0,00</strong>
+    </div>
+    <button class="btn btn-primario" id="ficha-add" type="button" style="width:100%">Colocar na sacola</button>
+  </div>
+</aside>
+</body>
+</html>

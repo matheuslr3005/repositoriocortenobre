@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://corte-nobre.vercel.app/sitemap.xml

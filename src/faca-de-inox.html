@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facas de aço inox · Corte Nobre</title>
+<meta name="description" content="Linha em aço inox de alta liga, temperada entre 58 e 60 HRC. Fulltang e língua de ximango, cabos em osso, chifre e madeira. Filtre por lâmina, modelo e cabo.">
+<meta name="theme-color" content="#17150F">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Facas de aço inox · Corte Nobre">
+<meta property="og:description" content="Aço inox de alta liga, temperado entre 58 e 60 HRC. Resiste à umidade sem perder o fio.">
+<meta property="og:image" content="https://corte-nobre.vercel.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Work+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/catalogo.css">
+<script type="module" src="js/app.js"></script>
+<script type="module" src="js/catalogo.js"></script>
+</head>
+<body>
+<div class="cortina" aria-hidden="true"><img src="img/selo-osso.webp" alt="" width="46" height="46"></div>
+<div class="grao" aria-hidden="true"></div>
+<!-- incluir:cabecalho.html -->
+
+<main id="conteudo">
+
+  <section class="topo-pagina">
+    <div class="wrap">
+      <div class="topo-grid">
+        <div>
+          <p class="kicker">Linha inox</p>
+          <h1>Facas de aço inox</h1>
+          <p class="lead">Aço inox de alta liga, temperado entre 58 e 60 HRC. Resiste à umidade e à acidez sem perder o fio. Escolha a lâmina em polegadas, o modelo e o cabo.</p>
+        </div>
+        <figure class="topo-foto" data-reveal>
+          <img src="img/trio-ponta.webp" srcset="img/trio-ponta@half.webp 700w, img/trio-ponta.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" alt="Facas de inox alinhadas sobre a bancada" width="1400" height="2489" loading="eager">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="filtros" id="filtros"></div>
+
+  <section class="wrap">
+    <div class="grade" id="grade" data-aco="inox"></div>
+
+    <div class="vazio" id="vazio" hidden>
+      <h3>Nenhuma peça nesta combinação</h3>
+      <p class="corpo" style="margin-inline:auto">A oficina forja sob encomenda. Manda a combinação que você quer e a gente responde com prazo e valor.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px">
+        <button class="btn btn-primario" id="pedir-sob-medida" type="button">Pedir sob encomenda</button>
+        <button class="btn btn-secundario" id="limpar" type="button">Limpar filtros</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="wrap">
+      <div class="duas">
+        <div>
+          <p class="kicker" data-reveal style="margin-bottom:18px">Como escolher</p>
+          <h2 class="titulo-secao" data-reveal>Dois modelos, três cabos</h2>
+          <p class="corpo" data-reveal style="margin-top:18px">A diferença entre eles está na espiga: a parte da lâmina que entra no cabo. É ela que define o peso na mão.</p>
+        </div>
+        <dl class="lista-marcada" data-escala="80">
+          <div data-reveal>
+            <dt>Fulltang</dt>
+            <dd>Espiga inteira, do fio ao pomo, com as talas do cabo pinadas nas laterais. Mais peso e mais equilíbrio na mão.</dd>
+          </div>
+          <div data-reveal>
+            <dt>Língua de ximango</dt>
+            <dd>Espiga afilada embutida no cabo maciço. Linha mais leve e enxuta, com o cabo em peça única.</dd>
+          </div>
+          <div data-reveal>
+            <dt>Cabos</dt>
+            <dd>Madeira estabilizada, osso, chifre ou imbuia com resina e folha de ouro. Cada cabo é ajustado à peça.</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" style="background:var(--carbono-fundo);border-block:1px solid var(--linha)">
+    <div class="wrap">
+      <div class="duas">
+        <div>
+          <p class="kicker" data-reveal style="margin-bottom:18px">Antes de comprar</p>
+          <h2 class="titulo-secao" data-reveal>O que muda no inox</h2>
+          <p class="corpo" data-reveal style="margin-top:18px">A mesma orientação que sai impressa dentro da caixa.</p>
+          <a class="link-fio" href="cuidados.html" data-reveal style="display:inline-block;margin-top:22px">Ver a orientação completa</a>
+        </div>
+        <dl class="lista-marcada" data-escala="80">
+          <div data-reveal>
+            <dt>Oxidação</dt>
+            <dd>São conhecidas como facas que não enferrujam. Com mau uso ainda assim podem oxidar, porque toda faca tem percentual de carbono na composição.</dd>
+          </div>
+          <div data-reveal>
+            <dt>Afiação de 15° a 20°</dt>
+            <dd>Afie com chaira passando a mesma quantidade de vezes de cada lado. Sem prática, procure um profissional: o acabamento brilhante marca com facilidade.</dd>
+          </div>
+          <div data-reveal>
+            <dt>Douradas e black</dt>
+            <dd>Produzidas em aço inox 420 com tratamento térmico de nitretação. Não corte objetos com pontas e nunca lave com a parte verde da esponja.</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao chamada">
+    <div class="wrap">
+      <p class="kicker" data-reveal style="margin-bottom:22px">Não achou o que queria</p>
+      <h2 class="titulo-secao" data-reveal>A oficina forja a combinação que você quiser</h2>
+      <div class="chamada-acoes" data-reveal>
+        <button class="btn btn-primario" data-whatsapp="Olá! Quero uma faca de inox sob encomenda na Corte Nobre." data-imanta type="button">Falar com a oficina</button>
+        <a class="btn btn-secundario" href="faca-de-carbono.html">Ver a linha de carbono</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- incluir:rodape.html -->
+<button class="zap" type="button" data-whatsapp="Olá! Vim pelo site da Corte Nobre." aria-label="Falar no WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.7 14.9L2 22l5.3-1.4A10 10 0 1012 2zm0 18.1c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.1 8.1 0 1112 20.1zm4.5-5.9c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.6 6.6 0 01-3.3-2.9c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1 1.9-.6 3.1a11 11 0 004.3 4.6c1.6.8 2.7.7 3.5.6.5-.1 1.4-.6 1.6-1.2.2-.6.2-1 .1-1.1l-.3-.1z"/></svg>
+</button>
+<!-- incluir:paineis.html -->
+</body>
+</html>

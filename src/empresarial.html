@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facas gravadas para empresas · Corte Nobre</title>
+<meta name="description" content="Facas artesanais com o logotipo da sua marca gravado na lâmina ou no cabo. Pedidos a partir de dez peças, com amostra aprovada antes da produção do lote.">
+<meta name="theme-color" content="#17150F">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Facas gravadas para empresas · Corte Nobre">
+<meta property="og:description" content="O logotipo da sua marca gravado na lâmina. Pedidos a partir de dez peças.">
+<meta property="og:image" content="https://corte-nobre.vercel.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Work+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/catalogo.css">
+<script type="module" src="js/app.js"></script>
+<script type="module" src="js/gravacao.js"></script>
+</head>
+<body>
+<div class="cortina" aria-hidden="true"><img src="img/selo-osso.webp" alt="" width="46" height="46"></div>
+<div class="grao" aria-hidden="true"></div>
+<!-- incluir:cabecalho.html -->
+
+<main id="conteudo">
+
+  <section class="topo-pagina">
+    <div class="wrap">
+      <div class="topo-grid">
+        <div>
+          <p class="kicker">Empresarial</p>
+          <h1>O logotipo da sua marca, gravado na lâmina</h1>
+          <p class="lead">Pedidos a partir de dez peças, com gravação na lâmina ou no cabo. Cada unidade sai com a mesma escolha de aço e cabo do catálogo.</p>
+          <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:32px">
+            <a class="btn btn-primario" href="#simulador" data-imanta>Simular a gravação</a>
+            <a class="btn btn-secundario" href="#orcamento">Pedir orçamento</a>
+          </div>
+        </div>
+        <figure class="topo-foto" data-reveal>
+          <img src="img/lote-gravado.webp" srcset="img/lote-gravado@half.webp 700w, img/lote-gravado.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" alt="Lote de facas com o logotipo de um cliente gravado na lâmina" width="1400" height="2368" loading="eager">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== simulador ===================== -->
+  <section class="secao" id="simulador" style="padding-top:clamp(48px,6vw,80px)">
+    <div class="wrap">
+      <div style="max-width:52ch;margin-bottom:clamp(28px,4vw,44px)">
+        <p class="kicker" data-reveal style="margin-bottom:18px">Antes do orçamento</p>
+        <h2 class="titulo-secao" data-reveal>Escreva o nome da sua marca e veja na lâmina</h2>
+        <p class="corpo" data-reveal style="margin-top:18px">É uma simulação para dar ideia de proporção. A gravação final é feita a partir do arquivo do seu logotipo.</p>
+      </div>
+
+      <div class="gravador">
+        <div>
+          <div class="lamina-palco" id="palco">
+            <img src="img/gravacao-palco.webp" srcset="img/gravacao-palco@half.webp 700w, img/gravacao-palco.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" alt="Lâmina forjada pronta para gravação" width="1600" height="542" loading="lazy">
+            <span class="gravacao" id="gravacao">Sua marca</span>
+          </div>
+          <p class="legenda" style="margin-top:12px">Gravação a laser na lâmina ou no cabo, conforme a peça escolhida.</p>
+        </div>
+
+        <div class="gravador-controles">
+          <label class="campo">
+            <span>Nome da marca</span>
+            <input type="text" id="grav-texto" maxlength="26" value="Sua marca" placeholder="Nome da empresa" autocomplete="off">
+          </label>
+
+          <div>
+            <span class="legenda" style="display:block;margin-bottom:10px">Acabamento</span>
+            <div class="escolhas" role="group" aria-label="Acabamento da gravação">
+              <button class="chip" type="button" data-acabamento="clara" aria-pressed="true">Clara, a laser</button>
+              <button class="chip" type="button" data-acabamento="marcada" aria-pressed="false">Escura, marcada a fogo</button>
+            </div>
+          </div>
+
+          <div>
+            <label class="legenda" for="grav-tam" style="display:block;margin-bottom:10px">Tamanho da gravação</label>
+            <input class="slider" type="range" id="grav-tam" min="16" max="58" value="32">
+          </div>
+
+          <div>
+            <label class="legenda" for="grav-pos" style="display:block;margin-bottom:10px">Posição na lâmina</label>
+            <input class="slider" type="range" id="grav-pos" min="18" max="70" value="34">
+          </div>
+
+          <div style="border-top:1px solid var(--linha);padding-top:22px">
+            <p class="corpo" style="font-size:15px;margin-bottom:18px">Gostou da proporção? Manda a arte que a oficina responde com prazo e valor por peça.</p>
+            <button class="btn btn-primario" id="grav-enviar" type="button" style="width:100%">Pedir orçamento no WhatsApp</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== etapas ===================== -->
+  <section class="secao" style="background:var(--carbono-fundo);border-block:1px solid var(--linha)">
+    <div class="wrap">
+      <div class="duas">
+        <div>
+          <p class="kicker" data-reveal style="margin-bottom:18px">Como funciona</p>
+          <h2 class="titulo-secao" data-reveal>Três etapas até o lote pronto</h2>
+          <p class="corpo" data-reveal style="margin-top:18px">Nenhuma peça entra em produção antes de você aprovar uma amostra física.</p>
+        </div>
+        <div data-escala="90">
+          <article class="etapa" data-reveal>
+            <p class="numero">01</p>
+            <div>
+              <h3>Briefing</h3>
+              <p class="corpo">Definimos modelo, aço, cabo e o arquivo da gravação.</p>
+            </div>
+          </article>
+          <article class="etapa" data-reveal>
+            <p class="numero">02</p>
+            <div>
+              <h3>Amostra</h3>
+              <p class="corpo">Uma peça vai para aprovação antes da produção do lote.</p>
+            </div>
+          </article>
+          <article class="etapa" data-reveal>
+            <p class="numero">03</p>
+            <div>
+              <h3>Produção</h3>
+              <p class="corpo">Forja, têmpera e gravação do lote inteiro, uma peça de cada vez.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== prova ===================== -->
+  <section class="secao">
+    <div class="wrap">
+      <div class="duas">
+        <figure style="position:relative;overflow:hidden;background:var(--carbono-alt)" data-reveal>
+          <img src="img/trio-chifre.webp" srcset="img/trio-chifre@half.webp 700w, img/trio-chifre.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" alt="Peças de um lote empresarial com cabos em chifre e osso" style="width:100%;object-fit:cover" width="1400" height="2489" loading="lazy">
+        </figure>
+        <div>
+          <p class="kicker" data-reveal style="margin-bottom:18px">Lote entregue</p>
+          <h2 class="titulo-secao" data-reveal>O mesmo logotipo, cabos escolhidos um a um</h2>
+          <p class="corpo" data-reveal style="margin-top:18px">Cada peça do lote sai com a mesma gravação, e os cabos em chifre, osso e madeira são selecionados na bancada. Nenhuma sai igual à outra.</p>
+          <dl class="lista-marcada" data-escala="80" style="margin-top:32px">
+            <div data-reveal><dt>Mínimo</dt><dd>Dez peças por pedido.</dd></div>
+            <div data-reveal><dt>Gravação</dt><dd>Na base da lâmina ou no cabo, a partir do arquivo vetorial da marca.</dd></div>
+            <div data-reveal><dt>Aço</dt><dd>Carbono forjado ou inox de alta liga, a escolher.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== orçamento ===================== -->
+  <section class="secao" id="orcamento" style="background:var(--carbono-fundo);border-top:1px solid var(--linha)">
+    <div class="wrap">
+      <div class="contato-grid">
+        <div>
+          <p class="kicker" data-reveal style="margin-bottom:18px">Orçamento</p>
+          <h2 class="titulo-secao" data-reveal>Conte o que você precisa</h2>
+          <p class="corpo" data-reveal style="margin-top:18px">Quem responde é quem forja. Ao enviar, a mensagem abre no WhatsApp da oficina já preenchida.</p>
+        </div>
+
+        <form id="form-orcamento" novalidate>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 18px">
+            <label class="campo"><span>Empresa</span><input type="text" name="empresa" required><em class="mensagem-erro">Escreva o nome da empresa.</em></label>
+            <label class="campo"><span>Seu nome</span><input type="text" name="nome" required><em class="mensagem-erro">Escreva o seu nome.</em></label>
+          </div>
+          <label class="campo"><span>Quantidade de peças</span>
+            <select name="quantidade">
+              <option>10 a 25 peças</option>
+              <option>26 a 50 peças</option>
+              <option>51 a 100 peças</option>
+              <option>Mais de 100 peças</option>
+            </select>
+          </label>
+          <label class="campo"><span>Detalhes do pedido</span><textarea name="detalhes" placeholder="Modelo, aço, cabo, prazo desejado e onde entra a gravação."></textarea></label>
+          <button class="btn btn-primario" type="submit" style="width:100%">Enviar pelo WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- incluir:rodape.html -->
+<button class="zap" type="button" data-whatsapp="Olá! Vim pelo site da Corte Nobre." aria-label="Falar no WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.7 14.9L2 22l5.3-1.4A10 10 0 1012 2zm0 18.1c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.1 8.1 0 1112 20.1zm4.5-5.9c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.6 6.6 0 01-3.3-2.9c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1 1.9-.6 3.1a11 11 0 004.3 4.6c1.6.8 2.7.7 3.5.6.5-.1 1.4-.6 1.6-1.2.2-.6.2-1 .1-1.1l-.3-.1z"/></svg>
+</button>
+<!-- incluir:paineis.html -->
+</body>
+</html>

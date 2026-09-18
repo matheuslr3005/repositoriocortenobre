@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Facas de aço carbono · Corte Nobre</title>
+<meta name="description" content="Linha em aço carbono forjado e temperado a 61 HRC. Fio mais agressivo, fácil de reafiar, com pátina que se forma com o uso. Cabos em chifre, osso e madeira.">
+<meta name="theme-color" content="#17150F">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Facas de aço carbono · Corte Nobre">
+<meta property="og:description" content="Aço carbono forjado e temperado a 61 HRC. Fio agressivo e fácil de reafiar em casa.">
+<meta property="og:image" content="https://corte-nobre.vercel.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Work+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/catalogo.css">
+<script type="module" src="js/app.js"></script>
+<script type="module" src="js/catalogo.js"></script>
+</head>
+<body>
+<div class="cortina" aria-hidden="true"><img src="img/selo-osso.webp" alt="" width="46" height="46"></div>
+<div class="grao" aria-hidden="true"></div>
+<!-- incluir:cabecalho.html -->
+
+<main id="conteudo">
+
+  <section class="topo-pagina">
+    <div class="wrap">
+      <div class="topo-grid">
+        <div>
+          <p class="kicker">Linha aço carbono</p>
+          <h1>Facas de aço carbono</h1>
+          <p class="lead">Forjado e temperado a 61 HRC. Fio mais agressivo e mais fácil de reafiar em casa. Pede secagem depois do uso e ganha pátina com o tempo.</p>
+        </div>
+        <figure class="topo-foto" data-reveal>
+          <img src="img/trio-carbono.webp" srcset="img/trio-carbono@half.webp 700w, img/trio-carbono.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" alt="Facas de aço carbono com lâmina escura sobre a bancada" width="1400" height="2489" loading="eager">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="filtros" id="filtros"></div>
+
+  <section class="wrap">
+    <div class="grade" id="grade" data-aco="carbono"></div>
+
+    <div class="vazio" id="vazio" hidden>
+      <h3>Nenhuma peça nesta combinação</h3>
+      <p class="corpo" style="margin-inline:auto">Cabos em chifre, osso e madeira, lâminas de 7 a 12 polegadas. Outras combinações saem sob encomenda.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px">
+        <button class="btn btn-primario" id="pedir-sob-medida" type="button">Pedir sob encomenda</button>
+        <button class="btn btn-secundario" id="limpar" type="button">Limpar filtros</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao">
+    <div class="wrap">
+      <div class="duas">
+        <figure style="position:relative;overflow:hidden;background:var(--carbono-alt)" data-reveal>
+          <img src="img/linha-carbono-oficina.webp" srcset="img/linha-carbono-oficina@half.webp 700w, img/linha-carbono-oficina.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" alt="Peças da linha carbono prontas na bancada da oficina" style="width:100%;height:100%;object-fit:cover" width="1400" height="2489" loading="lazy">
+        </figure>
+        <div>
+          <p class="kicker" data-reveal style="margin-bottom:18px">Na bancada</p>
+          <h2 class="titulo-secao" data-reveal>O carbono trabalha com quem usa</h2>
+          <p class="corpo" data-reveal style="margin-top:18px">Peças da linha carbono prontas na bancada. Cabos em chifre, osso e madeira, lâminas de 7 a 12 polegadas. Outras combinações saem sob encomenda.</p>
+          <dl class="lista-marcada" data-escala="80" style="margin-top:32px">
+            <div data-reveal>
+              <dt>Manutenção</dt>
+              <dd>Secar logo após o uso e passar óleo mineral. A pátina escura protege o aço.</dd>
+            </div>
+            <div data-reveal>
+              <dt>Fio</dt>
+              <dd>Ângulo de 12° por lado. Volta ao original em pedra d'água, sem retirar têmpera.</dd>
+            </div>
+            <div data-reveal>
+              <dt>Uso</dt>
+              <dd>Carne, osso e tábua de madeira. Evitar cítricos em contato prolongado.</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" style="background:var(--carbono-fundo);border-block:1px solid var(--linha)">
+    <div class="wrap">
+      <div class="duas">
+        <div>
+          <p class="kicker" data-reveal style="margin-bottom:18px">Antes de comprar</p>
+          <h2 class="titulo-secao" data-reveal>O aço carbono pede óleo</h2>
+          <p class="corpo" data-reveal style="margin-top:18px">Em troca, o fio volta com facilidade em casa. É a mesma orientação que sai impressa dentro da caixa.</p>
+          <a class="link-fio" href="cuidados.html" data-reveal style="display:inline-block;margin-top:22px">Ver a orientação completa</a>
+        </div>
+        <dl class="lista-marcada" data-escala="80">
+          <div data-reveal>
+            <dt>Oxidação natural</dt>
+            <dd>O aço carbono tem um processo de oxidação natural. Não é defeito, é o comportamento do material.</dd>
+          </div>
+          <div data-reveal>
+            <dt>Lubrificação</dt>
+            <dd>Armazene a faca seca e embebida em silicone, vaselina líquida, azeite ou óleo. Mesmo peças ainda sem uso pedem esse cuidado.</dd>
+          </div>
+          <div data-reveal>
+            <dt>Pontos de oxidação</dt>
+            <dd>Se aparecerem pontos alaranjados, limpe com bombril seco e passe um pano lubrificado com óleo. Eles ficam cinza escuro.</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao chamada">
+    <div class="wrap">
+      <p class="kicker" data-reveal style="margin-bottom:22px">Sob encomenda</p>
+      <h2 class="titulo-secao" data-reveal>Comprimento, aço e cabo definidos antes da forja</h2>
+      <div class="chamada-acoes" data-reveal>
+        <button class="btn btn-primario" data-whatsapp="Olá! Quero uma faca de aço carbono sob encomenda na Corte Nobre." data-imanta type="button">Falar com a oficina</button>
+        <a class="btn btn-secundario" href="faca-de-inox.html">Ver a linha de inox</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- incluir:rodape.html -->
+<button class="zap" type="button" data-whatsapp="Olá! Vim pelo site da Corte Nobre." aria-label="Falar no WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.7 14.9L2 22l5.3-1.4A10 10 0 1012 2zm0 18.1c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.1 8.1 0 1112 20.1zm4.5-5.9c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.6 6.6 0 01-3.3-2.9c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1 1.9-.6 3.1a11 11 0 004.3 4.6c1.6.8 2.7.7 3.5.6.5-.1 1.4-.6 1.6-1.2.2-.6.2-1 .1-1.1l-.3-.1z"/></svg>
+</button>
+<!-- incluir:paineis.html -->
+</body>
+</html>

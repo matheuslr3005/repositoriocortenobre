@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contato · Corte Nobre</title>
+<meta name="description" content="Fale com a oficina da Corte Nobre. Dúvida de modelo, afiação, prazo ou encomenda sob medida chega direto na bancada.">
+<meta name="theme-color" content="#17150F">
+<link rel="icon" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Contato · Corte Nobre">
+<meta property="og:description" content="Quem responde é quem forja.">
+<meta property="og:image" content="https://corte-nobre.vercel.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Work+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/home.css">
+<link rel="stylesheet" href="css/catalogo.css">
+<script type="module" src="js/app.js"></script>
+<script type="module" src="js/contato.js"></script>
+</head>
+<body>
+<div class="cortina" aria-hidden="true"><img src="img/selo-osso.webp" alt="" width="46" height="46"></div>
+<div class="grao" aria-hidden="true"></div>
+<!-- incluir:cabecalho.html -->
+
+<main id="conteudo">
+
+  <section class="topo-pagina">
+    <div class="wrap">
+      <div class="topo-grid">
+        <div>
+          <p class="kicker">Contato</p>
+          <h1>Quem responde é quem forja</h1>
+          <p class="lead">Dúvida de modelo, afiação, prazo ou encomenda sob medida chega direto na bancada.</p>
+        </div>
+        <figure class="topo-foto" data-reveal>
+          <img src="img/bancada.webp" srcset="img/bancada@half.webp 700w, img/bancada.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" alt="Bancada da oficina com facas alinhadas" width="1400" height="2489" loading="eager">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" style="padding-top:clamp(30px,4vw,48px)">
+    <div class="wrap">
+      <div class="contato-grid">
+        <div style="display:grid;gap:14px" data-escala="80">
+          <a class="cartao-contato" data-contato="whatsapp-link" href="#" target="_blank" rel="noopener" data-reveal>
+            <span class="legenda">WhatsApp</span>
+            <span class="valor" data-contato="whatsapp">(00) 00000 0000</span>
+            <span class="legenda">O caminho mais rápido até a oficina.</span>
+          </a>
+          <a class="cartao-contato" data-contato="email" href="#" data-reveal>
+            <span class="legenda">E-mail</span>
+            <span class="valor">contato@cortenobre.com.br</span>
+            <span class="legenda">Para arquivos de gravação e pedidos empresariais.</span>
+          </a>
+          <a class="cartao-contato" data-contato="instagram" href="#" target="_blank" rel="noopener" data-reveal>
+            <span class="legenda">Instagram</span>
+            <span class="valor">@cortenobre</span>
+            <span class="legenda">As peças que saem da bancada, uma a uma.</span>
+          </a>
+          <div class="cartao-contato" data-reveal>
+            <span class="legenda">Horário</span>
+            <span class="valor" style="font-size:19px" data-contato="horario">Segunda a sexta, 9h às 18h</span>
+            <span class="legenda">Visita à oficina com hora marcada.</span>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="titulo-secao" data-reveal style="margin-bottom:12px">Mandar uma mensagem</h2>
+          <p class="corpo" data-reveal style="margin-bottom:28px">Preencha e a conversa abre no WhatsApp da oficina já escrita. Nada fica guardado no site.</p>
+
+          <form id="form-contato" novalidate>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0 18px">
+              <label class="campo"><span>Nome</span><input type="text" name="nome" required autocomplete="name"><em class="mensagem-erro">Escreva o seu nome.</em></label>
+              <label class="campo"><span>Telefone (opcional)</span><input type="tel" name="telefone" autocomplete="tel"></label>
+            </div>
+            <label class="campo"><span>Assunto</span>
+              <select name="assunto">
+                <option>Quero comprar uma peça do catálogo</option>
+                <option>Quero uma faca sob encomenda</option>
+                <option>Pedido empresarial com gravação</option>
+                <option>Afiação e manutenção</option>
+                <option>Outro assunto</option>
+              </select>
+            </label>
+            <label class="campo"><span>Mensagem</span><textarea name="mensagem" required placeholder="Conte o que você procura: aço, tamanho da lâmina e cabo."></textarea><em class="mensagem-erro">Escreva a sua mensagem.</em></label>
+            <button class="btn btn-primario" type="submit" style="width:100%">Abrir no WhatsApp</button>
+            <p class="legenda" style="margin-top:14px">Prefere e-mail? <a class="link-fio" data-contato="email" href="#">escreva para a oficina</a>.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- incluir:rodape.html -->
+<button class="zap" type="button" data-whatsapp="Olá! Vim pelo site da Corte Nobre." aria-label="Falar no WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 00-8.7 14.9L2 22l5.3-1.4A10 10 0 1012 2zm0 18.1c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.1 8.1 0 1112 20.1zm4.5-5.9c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.7.9c-.1.2-.3.2-.5.1a6.6 6.6 0 01-3.3-2.9c-.1-.2 0-.4.1-.5l.4-.5c.1-.2.1-.3 0-.5l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.5.1-.7.3-.8.8-1 1.9-.6 3.1a11 11 0 004.3 4.6c1.6.8 2.7.7 3.5.6.5-.1 1.4-.6 1.6-1.2.2-.6.2-1 .1-1.1l-.3-.1z"/></svg>
+</button>
+<!-- incluir:paineis.html -->
+</body>
+</html>

@@ -1,0 +1,36 @@
+<div class="veu" aria-hidden="true"></div>
+
+<aside class="painel" id="painel-sacola" aria-hidden="true" aria-label="Sacola">
+  <div class="painel-topo">
+    <h2 class="titulo" style="font-size:20px">Sua sacola</h2>
+    <button class="fechar" type="button" aria-label="Fechar sacola">
+      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M1 1l13 13M14 1L1 14" stroke="currentColor"/></svg>
+    </button>
+  </div>
+  <div class="painel-corpo" id="sacola-corpo"></div>
+  <div class="painel-pe" id="sacola-pe" hidden>
+    <div class="total-linha">
+      <span class="legenda">Total das peças</span>
+      <strong class="total-valor" id="sacola-total">R$ 0,00</strong>
+    </div>
+    <p class="legenda" id="sacola-nota" style="margin-bottom:16px"></p>
+    <button class="btn btn-primario" id="fechar-pedido" type="button" style="width:100%">Fechar pedido no WhatsApp</button>
+  </div>
+</aside>
+
+<aside class="painel painel-largo" id="painel-ficha" aria-hidden="true" aria-label="Peça">
+  <div class="painel-topo">
+    <span class="kicker sem-fio">Peça</span>
+    <button class="fechar" type="button" aria-label="Fechar">
+      <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M1 1l13 13M14 1L1 14" stroke="currentColor"/></svg>
+    </button>
+  </div>
+  <div class="painel-corpo" id="ficha-conteudo"></div>
+  <div class="painel-pe">
+    <div class="total-linha">
+      <span class="legenda">Valor da peça</span>
+      <strong class="total-valor" id="ficha-preco">R$ 0,00</strong>
+    </div>
+    <button class="btn btn-primario" id="ficha-add" type="button" style="width:100%">Colocar na sacola</button>
+  </div>
+</aside>
