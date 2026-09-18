@@ -1,0 +1,16 @@
+/* Cantos e bordas — a identidade é inteiramente reta: nenhum raio em nenhuma peça.
+   O único elemento de separação é o filete de 1px em Prata a 18% (o brilho do fio). */
+:root {
+  --radius-none: 0;
+  --radius-pill: 999px; /* exceção única: indicadores circulares (ponto de status, contador) */
+
+  --border-width: 1px;
+  --border-hairline: 1px solid var(--linha);
+  --border-hairline-forte: 1px solid var(--linha-forte);
+  --border-top-hairline: 1px solid var(--linha);
+  --border-accent: 1px solid var(--brasa);
+
+  --rule-width: 1px;
+  --focus-width: 1px;
+  --focus-offset: 2px;
+}

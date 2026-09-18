@@ -1,0 +1,14 @@
+/* Fontes da marca — ambas Google Fonts, conforme o guia de identidade.
+   Fraunces: eixo óptico variável (opsz 9..144), pesos 300 / 400 / 600.
+   Work Sans: pesos 300 / 400 / 500 / 600.
+   Servidas pelo CDN do Google (nenhum binário local no repositório). */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,600&family=Work+Sans:wght@300;400;500;600&display=swap");
+
+:root {
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-body: "Work Sans", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+
+  /* aliases semânticos */
+  --font-titulo: var(--font-display);
+  --font-interface: var(--font-body);
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/tokens/borders.css">
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/tokens/elevation.css">
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/tokens/motion.css">
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/tokens/texture.css">
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/styles.css">
+  <script src="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/_ds_bundle.js"></script>
+  <script src="./image-slot.js"></script>
+  <script src="./cn-anim.js"></script>
+  <style>
+    body { margin: 0; background: var(--carbono); color: var(--text-primary); font: var(--type-corpo); }
+    a { color: var(--text-secondary); text-decoration: none; transition: color 120ms cubic-bezier(0.2,0,0.2,1); }
+    a:hover { color: var(--text-primary); }
+    html { scroll-behavior: smooth; }
+    @keyframes cn-reveal { from { transform: translateY(112%) } to { transform: translateY(0) } }
+    @keyframes cn-rise { from { opacity: 0; transform: translateY(12px) } to { opacity: 1; transform: none } }
+    @keyframes cn-draw { from { transform: scaleX(0) } to { transform: scaleX(1) } }
+    @keyframes cn-fade { from { opacity: 0 } to { opacity: 1 } }
+    [data-scroll-anim] [data-r] { opacity: 0; transform: translateY(16px); transition: opacity 640ms cubic-bezier(0.2,0,0.2,1), transform 640ms cubic-bezier(0.2,0,0.2,1) }
+    [data-scroll-anim] [data-r][data-in="1"] { opacity: 1; transform: none }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto }
+      * { animation: none !important }
+      [data-scroll-anim] [data-r] { opacity: 1 !important; transform: none !important; transition: none }
+    }
+  </style>
+</helmet>
+
+<div data-cn-root="1" style="background:var(--carbono);min-height:100vh">
+
+  <header style="position:sticky;top:0;z-index:5;background:var(--carbono);border-bottom:1px solid var(--linha)">
+    <div style="max-width:1180px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:40px">
+      <a href="index.html" style="display:flex;align-items:center;flex:0 0 auto">
+        <img src="uploads/selo-reduzido-osso.png" alt="Corte Nobre" style="height:34px;width:auto;display:block">
+      </a>
+      <nav style="display:flex;gap:28px;flex:1 1 auto;font:var(--type-caption)">
+        <a href="index.html">Home</a>
+        <a href="faca-de-inox.html">Faca de Inox</a>
+        <a href="faca-de-carbono.html">Faca de Carbono</a>
+        <a href="empresarial.html">Empresarial</a>
+        <a href="contato.html" style="color:var(--osso);border-bottom:1px solid var(--brasa);padding-bottom:2px">Contato</a>
+      </nav>
+      <div style="display:flex;gap:20px;align-items:center;flex:0 0 auto">
+        <a href="sacola.html" style="font:var(--type-legenda);color:var(--osso);border:1px solid var(--linha-forte);padding:7px 12px">{{ sacolaLabel }}</a>
+      </div>
+    </div>
+  </header>
+
+  <section data-r="1" style="max-width:1180px;margin:0 auto;padding:72px 32px 0">
+    <p style="font:var(--type-legenda);letter-spacing:0.04em;color:var(--brasa);margin:0 0 20px;animation:cn-fade 700ms cubic-bezier(0.2,0,0.2,1) both;animation-delay:80ms">Contato</p>
+    <h1 style="font:var(--type-hero);font-size:52px;font-weight:300;line-height:1.05;color:var(--osso);margin:0 0 20px;max-width:16ch;text-wrap:pretty;overflow:hidden;padding-top:0.12em"><span style="display:block;animation:cn-reveal 1000ms cubic-bezier(0.16,1,0.3,1) both;animation-delay:220ms">Fale conosco!</span></h1>
+    <p style="font:var(--type-lead);color:var(--text-secondary);margin:0;max-width:56ch;text-wrap:pretty;animation:cn-rise 750ms cubic-bezier(0.22,1,0.36,1) both;animation-delay:640ms">Quem responde é quem forja. Dúvida de modelo, afiação, prazo ou encomenda sob medida chega direto na bancada.</p>
+  </section>
+
+  <section data-r="1" style="max-width:1180px;margin:0 auto;padding:56px 32px 0">
+    <div style="border-top:1px solid var(--linha);padding-top:40px;display:grid;grid-template-columns:repeat(2,minmax(0,260px));justify-content:center;gap:120px;text-align:center">
+      <div>
+        <span style="font:var(--type-legenda);color:var(--aco);letter-spacing:0.04em;display:block;margin-bottom:10px">WhatsApp</span>
+        <p style="font:var(--type-corpo);color:var(--osso);margin:0">(00) 00000-0000</p>
+      </div>
+      <div>
+        <span style="font:var(--type-legenda);color:var(--aco);letter-spacing:0.04em;display:block;margin-bottom:10px">E-mail</span>
+        <p style="font:var(--type-corpo);color:var(--osso);margin:0 0 6px">contato@cortenobre.com.br</p>
+        <p style="font:var(--type-legenda);color:var(--aco);margin:0">Resposta em até dois dias úteis</p>
+      </div>
+      <div style="display: none">
+        <span style="font:var(--type-legenda);color:var(--aco);letter-spacing:0.04em;display:block;margin-bottom:10px">Oficina</span>
+        <p style="font:var(--type-corpo);color:var(--osso);margin:0 0 6px">Visita com hora marcada</p>
+        <p style="font:var(--type-legenda);color:var(--aco);margin:0">Endereço a informar</p>
+      </div>
+      <div style="display: none">
+        <span style="font:var(--type-legenda);color:var(--aco);letter-spacing:0.04em;display:block;margin-bottom:10px">Horário</span>
+        <p style="font:var(--type-corpo);color:var(--osso);margin:0 0 6px">Segunda a sexta, 9h às 18h</p>
+        <p style="font:var(--type-legenda);color:var(--aco);margin:0">Sábado sob agendamento</p>
+      </div>
+    </div>
+  </section>
+
+  <section data-r="1" style="max-width:1180px;margin:0 auto;padding:112px 32px 0">
+    <div style="background:var(--carbono-alt);border:1px solid var(--linha);padding:56px 44px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:48px">
+      <div>
+        <h2 style="font:var(--type-secao);color:var(--osso);margin:0 0 12px;text-wrap:pretty">Mandar uma mensagem</h2>
+        <p style="font:var(--type-corpo);color:var(--text-secondary);margin:0;max-width:44ch;text-wrap:pretty">Deixe nome, e-mail e telefone. A oficina retorna pelo canal que você preferir.</p>
+      </div>
+      <div>
+        <sc-if value="{{ formPendente }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <x-import component-from-global-scope="FacasArtesanaisDesignSystem_ba06ad.Input" placeholder="nome" hint-size="100%,44px" style="padding:12px 14px;box-sizing:border-box"></x-import>
+            <x-import component-from-global-scope="FacasArtesanaisDesignSystem_ba06ad.Input" type="email" placeholder="e-mail" hint-size="100%,44px" style="padding:12px 14px;box-sizing:border-box"></x-import>
+            <x-import component-from-global-scope="FacasArtesanaisDesignSystem_ba06ad.Input" type="tel" placeholder="telefone" hint-size="100%,44px" style="padding:12px 14px;box-sizing:border-box"></x-import>
+            <div style="display:flex">
+              <x-import component-from-global-scope="FacasArtesanaisDesignSystem_ba06ad.Button" variant="primary" onClick="{{ enviar }}" hint-size="160px,44px">Enviar mensagem</x-import>
+            </div>
+          </div>
+        </sc-if>
+        <sc-if value="{{ formEnviado }}" hint-placeholder-val="{{ false }}">
+          <p style="font:var(--type-corpo);color:var(--osso);margin:0;border-left:2px solid var(--brasa);padding-left:16px">Mensagem registrada. A oficina responde em até dois dias úteis.</p>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <footer data-r="1" style="max-width:1180px;margin:0 auto;padding:112px 32px 64px">
+    <div style="border-top:1px solid var(--linha);padding-top:56px;display:grid;grid-template-columns:auto repeat(3,minmax(0,1fr));gap:48px">
+      <img src="uploads/assinatura-vertical-osso.png" alt="Corte Nobre" style="width:150px;height:auto;display:block">
+      <div style="display:flex;flex-direction:column;gap:10px;font:var(--type-caption)">
+        <span style="font:var(--type-legenda);color:var(--aco);letter-spacing:0.04em;margin-bottom:6px">Catálogo</span>
+        <a href="faca-de-inox.html">Faca de inox</a>
+        <a href="faca-de-carbono.html">Faca de carbono</a>
+        <a href="empresarial.html">Empresarial</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font:var(--type-caption)">
+        <span style="font:var(--type-legenda);color:var(--aco);letter-spacing:0.04em;margin-bottom:6px">A marca</span>
+        <a href="index.html">A oficina</a>
+        <a href="contato.html">Cuidados e afiação</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font:var(--type-caption)">
+        <span style="font:var(--type-legenda);color:var(--aco);letter-spacing:0.04em;margin-bottom:6px">Atendimento</span>
+        <a href="contato.html">Falar com a oficina</a>
+        <a href="sacola.html">Sacola</a>
+      </div>
+    </div>
+    <p style="font:var(--type-legenda);color:var(--aco);margin:56px 0 0">Corte Nobre · Facas artesanais ·&nbsp;</p>
+  </footer>
+
+  <div style="position:fixed;inset:0;background-image:var(--textura-grao);background-size:var(--textura-tile);opacity:var(--textura-opacidade);pointer-events:none;z-index:6"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const LS = "cn-sacola";
+function ler() { try { return JSON.parse(localStorage.getItem(LS) || "[]"); } catch (e) { return []; } }
+
+class Component extends DCLogic {
+  state = { itens: [], enviado: false };
+
+  componentDidMount() { this.setState({ itens: ler() }); }
+
+  renderVals() {
+    return {
+      sacolaLabel: "Sacola (" + this.state.itens.length + ")",
+      formPendente: !this.state.enviado,
+      formEnviado: this.state.enviado,
+      enviar: () => this.setState({ enviado: true }),
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/tokens/borders.css">
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/tokens/elevation.css">
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/tokens/motion.css">
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/tokens/texture.css">
+  <link rel="stylesheet" href="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/styles.css">
+  <script src="_ds/facas-artesanais-corte-nobre-ba06ada2-d875-479d-bd65-840bfb250839/_ds_bundle.js"></script>
+  <script src="./image-slot.js"></script>
+  <script src="./cn-anim.js"></script>
+  <style>
+    body { margin: 0; background: var(--carbono); color: var(--text-primary); font: var(--type-corpo); }
+    a { color: var(--text-secondary); text-decoration: none; transition: color 120ms cubic-bezier(0.2,0,0.2,1); }
+    a:hover { color: var(--text-primary); }
+    html { scroll-behavior: smooth; }
+    @keyframes cn-reveal { from { transform: translateY(112%) } to { transform: translateY(0) } }
+    @keyframes cn-rise { from { opacity: 0; transform: translateY(12px) } to { opacity: 1; transform: none } }
+    @keyframes cn-draw { from { transform: scaleX(0) } to { transform: scaleX(1) } }
+    [data-scroll-anim] [data-r] { opacity: 0; transform: translateY(16px); transition: opacity 640ms cubic-bezier(0.2,0,0.2,1), transform 640ms cubic-bezier(0.2,0,0.2,1) }
+    [data-scroll-anim] [data-r][data-in="1"] { opacity: 1; transform: none }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto }
+      * { animation: none !important }
+      [data-scroll-anim] [data-r] { opacity: 1 !important; transform: none !important; transition: none }
+    }
+  </style>
+</helmet>
+
+<div data-cn-root="1" style="background:var(--carbono);min-height:100vh">
+
+  <header style="position:sticky;top:0;z-index:5;background:var(--carbono);border-bottom:1px solid var(--linha)">
+    <div style="max-width:1180px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;gap:40px">
+      <a href="index.html" style="display:flex;align-items:center;flex:0 0 auto">
+        <img src="uploads/selo-reduzido-osso.png" alt="Corte Nobre" style="height:34px;width:auto;display:block">
+      </a>
+      <nav style="display:flex;gap:28px;flex:1 1 auto;font:var(--type-caption)">
+        <a href="index.html">Home</a>
+        <a href="faca-de-inox.html" style="color:var(--osso);border-bottom:1px solid var(--brasa);padding-bottom:2px">Faca de Inox</a>
+        <a href="faca-de-carbono.html">Faca de Carbono</a>
+        <a href="empresarial.html">Empresarial</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <div style="display:flex;gap:20px;align-items:center;flex:0 0 auto">
+        <a href="sacola.html" style="font:var(--type-legenda);color:var(--osso);border:1px solid var(--linha-forte);padding:7px 12px">{{ sacolaLabel }}</a>
+      </div>
+    </div>
+  </header>
+
+  <section data-r="1" style="max-width:1180px;margin:0 auto;padding:72px 32px 0">
+    <p style="font:var(--type-legenda);letter-spacing:0.04em;color:var(--brasa);margin:0 0 20px">Linha inox</p>
+    <h1 style="font:var(--type-hero);font-size:52px;font-weight:300;line-height:1.05;color:var(--osso);margin:0 0 20px;max-width:16ch;text-wrap:pretty;overflow:hidden;padding-top:0.12em"><span style="display: block; animation: cn-reveal 1000ms cubic-bezier(0.16,1,0.3,1) both; animation-delay: 180ms">Facas de inox</span></h1>
+    <span style="display:block;width:72px;height:1px;background:var(--prata);transform-origin:left center;margin:0 0 24px;animation:cn-draw 700ms cubic-bezier(0.16,1,0.3,1) both;animation-delay:620ms"></span>
+    <p style="font:var(--type-lead);color:var(--text-secondary);margin:0;max-width:56ch;text-wrap:pretty;animation:cn-rise 750ms cubic-bezier(0.22,1,0.36,1) both;animation-delay:720ms">Aço inox de alta liga, temperado entre 58 e 60 HRC. Resiste à umidade e à acidez sem perder o fio. Escolha a lâmina em polegadas, o modelo e o cabo.</p>
+  </section>
+
+  <section id="catalogo" data-r="1" style="max-width:1180px;margin:0 auto;padding:56px 32px 0;scroll-margin-top:88px">
+    <div style="border-top:1px solid var(--linha);padding-top:40px;display:grid;gap:28px">
+
+      <div style="display:grid;gap:12px">
+        <span style="font:var(--type-legenda);letter-spacing:0.04em;color:var(--aco)">Modelo</span>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <sc-for list="{{ chipsModelo }}" as="chip" hint-placeholder-count="3">
+            <button type="button" onClick="{{ chip.acao }}" style="font:var(--type-legenda);color:{{ chip.cor }};background:{{ chip.fundo }};border:1px solid {{ chip.borda }};padding:9px 15px;cursor:pointer;transition:color 120ms cubic-bezier(0.2,0,0.2,1),border-color 120ms cubic-bezier(0.2,0,0.2,1),background-color 120ms cubic-bezier(0.2,0,0.2,1)">{{ chip.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="display:grid;gap:12px">
+        <span style="font:var(--type-legenda);letter-spacing:0.04em;color:var(--aco)">Lâmina</span>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <sc-for list="{{ chipsPolegada }}" as="chip" hint-placeholder-count="5">
+            <button type="button" onClick="{{ chip.acao }}" style="font:var(--type-legenda);color:{{ chip.cor }};background:{{ chip.fundo }};border:1px solid {{ chip.borda }};padding:9px 15px;cursor:pointer;transition:color 120ms cubic-bezier(0.2,0,0.2,1),border-color 120ms cubic-bezier(0.2,0,0.2,1),background-color 120ms cubic-bezier(0.2,0,0.2,1)">{{ chip.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="display:grid;gap:12px">
+        <span style="font:var(--type-legenda);letter-spacing:0.04em;color:var(--aco)">Cabo</span>
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <sc-for list="{{ chipsCabo }}" as="chip" hint-placeholder-count="5">
+            <button type="button" onClick="{{ chip.acao }}" style="font:var(--type-legenda);color:{{ chip.cor }};background:{{ chip.fundo }};border:1px solid {{ chip.borda }};padding:9px 15px;cursor:pointer;transition:color 120ms cubic-bezier(0.2,0,0.2,1),border-color 120ms cubic-bezier(0.2,0,0.2,1),background-color 120ms cubic-bezier(0.2,0,0.2,1)">{{ chip.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--linha-fraca);padding-top:20px">
+        <p style="font:var(--type-legenda);color:var(--text-secondary);margin:0">{{ contagem }}</p>
+        <sc-if value="{{ temFiltro }}" hint-placeholder-val="{{ false }}">
+          <x-import component-from-global-scope="FacasArtesanaisDesignSystem_ba06ad.Button" size="sm" variant="ghost" onClick="{{ limpar }}" hint-size="120px,32px">Limpar filtros</x-import>
+        </sc-if>
+      </div>
+
+    </div>
+  </section>
+
+  <section data-r="1" style="max-width:1180px;margin:0 auto;padding:36px 32px 0">
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px">
+      <sc-for list="{{ itens }}" as="peca" hint-placeholder-count="3">
+        <div style="border:var(--border-hairline);border-radius:var(--radius-none);background:transparent;display:flex;flex-direction:column;height:100%">
+          <div style="position:relative;aspect-ratio:4/5;background:var(--carbono-alt);padding:18px 0"><image-slot id="{{ peca.slot }}" shape="rect" fit="contain" src="{{ peca.img }}" placeholder="{{ peca.nome }}"></image-slot></div>
+          <div style="padding:16px 18px 20px;display:flex;flex-direction:column;flex:1 1 auto">
+            <h3 style="font:var(--type-titulo-2);color:var(--osso);margin:0 0 6px">{{ peca.nome }}</h3>
+            <p style="font:var(--type-legenda);color:var(--text-secondary);margin:0 0 8px;text-wrap:pretty">{{ peca.spec }}</p>
+            <p style="font:var(--type-legenda);color:var(--text-secondary);margin:0 0 16px;text-wrap:pretty">{{ peca.detalhe }}</p>
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid var(--linha-fraca);padding-top:16px;margin-top:auto">
+              <span style="font:var(--type-caption);color:var(--osso);white-space:nowrap">{{ peca.preco }}</span>
+              <div style="display:flex;gap:8px">
+                <x-import component-from-global-scope="FacasArtesanaisDesignSystem_ba06ad.Button" size="sm" variant="ghost" onClick="{{ peca.guardar }}" hint-size="90px,32px">{{ peca.rotulo }}</x-import>
+                <x-import component-from-global-scope="FacasArtesanaisDesignSystem_ba06ad.Button" size="sm" variant="primary" onClick="{{ peca.reservar }}" hint-size="90px,32px">Comprar</x-import>
+              </div>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <sc-if value="{{ vazio }}" hint-placeholder-val="{{ false }}">
+      <div style="border:1px solid var(--linha);padding:56px 32px;text-align:center">
+        <p style="font:var(--type-lead);color:var(--osso);margin:0 0 8px">Nenhuma peça nesta combinação.</p>
+        <p style="font:var(--type-caption);color:var(--text-secondary);margin:0">A oficina forja sob encomenda: fale com a gente para montar esta configuração.</p>
+      </div>
+    </sc-if>
+  </section>
+
+  <section data-r="1" style="max-width:1180px;margin:0 auto;padding:112px 32px 0">
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px">
+      <div style="border-top:2px solid var(--brasa);padding-top:20px">
+        <h3 style="font:var(--type-titulo-2);color:var(--osso);margin:0 0 10px">Fulltang</h3>
+        <p style="font:var(--type-caption);color:var(--text-secondary);margin:0;text-wrap:pretty">Espiga inteira, do fio ao pomo, com as talas do cabo pinadas nas laterais. Mais peso e mais equilíbrio na mão.</p>
+      </div>
+      <div style="border-top:2px solid var(--brasa);padding-top:20px">
+        <h3 style="font:var(--type-titulo-2);color:var(--osso);margin:0 0 10px">Língua de ximango</h3>
+        <p style="font:var(--type-caption);color:var(--text-secondary);margin:0;text-wrap:pretty">Espiga afilada embutida no cabo maciço. Linha mais leve e enxuta, com o cabo em peça única.</p>
+      </div>
+      <div style="border-top:2px solid var(--brasa);padding-top:20px">
+        <h3 style="font:var(--type-titulo-2);color:var(--osso);margin:0 0 10px">Cabos</h3>
+        <p style="font:var(--type-caption);color:var(--text-secondary);margin:0;text-wrap:pretty">Madeira estabilizada, osso, chifre ou madeira resinado com folha de ouro. Cada cabo é ajustado à peça.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="cuidados" data-r="1" style="max-width:1180px;margin:0 auto;padding:112px 32px 0;scroll-margin-top:88px">
+    <div style="border-top:1px solid var(--linha);padding-top:56px">
+      <p style="font:var(--type-legenda);letter-spacing:0.04em;color:var(--aco);margin:0 0 16px">Antes de comprar</p>
+      <h2 style="font:var(--type-secao);font-weight:300;color:var(--osso);margin:0 0 20px;max-width:24ch">Cuidados com a lâmina</h2>
+      <p style="font:var(--type-lead);color:var(--text-secondary);margin:0 0 48px;max-width:56ch;text-wrap:pretty">Toda peça sai da oficina com esta orientação de uso e conservação. São três hábitos simples e um cuidado próprio do inox.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px">
+        <div style="background:var(--carbono-alt);border:var(--border-hairline);padding:28px 26px">
+          <h3 style="font:var(--type-titulo-2);color:var(--osso);margin:0 0 4px">Uso e conservação</h3>
+          <p style="font:var(--type-legenda);color:var(--aco);margin:0 0 24px">Vale para qualquer faca da casa</p>
+          <div style="display:grid;gap:18px">
+            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px;border-top:1px solid var(--linha-fraca);padding-top:18px">
+              <span style="font:var(--type-legenda);color:var(--prata)">01</span>
+              <p style="font:var(--type-caption);color:var(--osso);margin:0;text-wrap:pretty">As facas são destinadas para corte de churrasco.</p>
+            </div>
+            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px;border-top:1px solid var(--linha-fraca);padding-top:18px">
+              <span style="font:var(--type-legenda);color:var(--prata)">02</span>
+              <p style="font:var(--type-caption);color:var(--osso);margin:0;text-wrap:pretty">Mantenha sua faca sempre seca.</p>
+            </div>
+            <div style="display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px;border-top:1px solid var(--linha-fraca);padding-top:18px">
+              <span style="font:var(--type-legenda);color:var(--prata)">03</span>
+              <p style="font:var(--type-caption);color:var(--osso);margin:0;text-wrap:pretty">A bainha serve para o transporte da faca, portanto evite deixar por longos períodos dentro da bainha: o couro pode oxidar sua faca aceleradamente.</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="border:var(--border-hairline);border-top:2px solid var(--brasa);padding:28px 26px">
+          <h3 style="font:var(--type-titulo-2);color:var(--osso);margin:0 0 4px">Facas em aço inox</h3>
+          <p style="font:var(--type-legenda);color:var(--aco);margin:0 0 24px">O que muda nesta linha</p>
+          <div style="display:grid;gap:18px">
+            <div style="border-top:1px solid var(--linha-fraca);padding-top:18px">
+              <p style="font:var(--type-legenda);letter-spacing:0.04em;color:var(--osso-dim);margin:0 0 8px">Oxidação</p>
+              <p style="font:var(--type-caption);color:var(--osso);margin:0;text-wrap:pretty">São conhecidas como facas que não enferrujam, porém se houver mau uso também pode oxidar, pois toda faca tem percentual de carbono em sua composição.</p>
+            </div>
+            <div style="border-top:1px solid var(--linha-fraca);padding-top:18px">
+              <p style="font:var(--type-legenda);letter-spacing:0.04em;color:var(--osso-dim);margin:0 0 8px">Afiação · 15° a 20°</p>
+              <p style="font:var(--type-caption);color:var(--osso);margin:0;text-wrap:pretty">Afie sua faca com chaira, passando a mesma quantidade de vezes de cada lado em ângulo de 15° a 20°. Facas em inox têm acabamento brilhante: tenha cuidado para não danificar a peça. Caso não tenha prática, indicamos que procure um profissional para afiação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p style="font:var(--type-legenda);color:var(--aco);margin:28px 0 0;max-width:62ch;text-wrap:pretty">Facas douradas e black fosfatizada são produzidas em aço inox 420 com tratamento térmico de nitretação: não corte objetos com pontas, não deixe a lâmina molhada por muito tempo e não lave com a parte verde da esponja.</p>
+    </div>
+  </section>
+
+  <footer data-r="1" style="max-width:1180px;margin:0 auto;padding:112px 32px 64px">
+    <div style="border-top:1px solid var(--linha);padding-top:56px;display:grid;grid-template-columns:auto repeat(3,minmax(0,1fr));gap:48px">
+      <img src="uploads/assinatura-vertical-osso.png" alt="Corte Nobre" style="width:150px;height:auto;display:block">
+      <div style="display:flex;flex-direction:column;gap:10px;font:var(--type-caption)">
+        <span style="font:var(--type-legenda);color:var(--aco);letter-spacing:0.04em;margin-bottom:6px">Catálogo</span>
+        <a href="faca-de-inox.html">Faca de inox</a>
+        <a href="faca-de-carbono.html">Faca de carbono</a>
+        <a href="empresarial.html">Empresarial</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font:var(--type-caption)">
+        <span style="font:var(--type-legenda);color:var(--aco);letter-spacing:0.04em;margin-bottom:6px">A marca</span>
+        <a href="index.html">A oficina</a>
+        <a href="contato.html">Cuidados e afiação</a>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font:var(--type-caption)">
+        <span style="font:var(--type-legenda);color:var(--aco);letter-spacing:0.04em;margin-bottom:6px">Atendimento</span>
+        <a href="contato.html">Falar com a oficina</a>
+        <a href="sacola.html">Sacola</a>
+      </div>
+    </div>
+    <p style="font:var(--type-legenda);color:var(--aco);margin:56px 0 0">Corte Nobre · Facas artesanais ·</p>
+  </footer>
+
+  <div style="position:fixed;inset:0;background-image:var(--textura-grao);background-size:var(--textura-tile);opacity:var(--textura-opacidade);pointer-events:none;z-index:6"></div>
+</div>
+
+<sc-if value="{{ toastAberto }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;left:32px;bottom:32px;z-index:40">
+    <x-import component-from-global-scope="FacasArtesanaisDesignSystem_ba06ad.Toast" tone="brasa" onClose="{{ fecharToast }}" hint-size="280px,48px">{{ toastTexto }}</x-import>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+const LS = "cn-sacola";
+const MM = { 7: 178, 8: 203, 9: 229, 12: 305 };
+
+const PECAS = [
+  {
+    n: "001/40", modelo: "Fulltang", pol: 8, cabo: "Osso", preco: 239.9,
+    nome: 'Inox 8" · cabo osso',
+    detalhe: "Cabo em osso natural, virola de alumínio e topo em acrílico preto.",
+    img: "produtos/inox-8-osso-v2.jpg",
+  },
+  {
+    n: "002/40", modelo: "Fulltang", pol: 8, cabo: "Madeira imbuia com resina", preco: 239.9,
+    nome: 'Inox 8" · imbuia com folha de ouro',
+    detalhe: "Cabo em imbuia com anel de resina e folha de ouro entre filetes pretos.",
+    img: "produtos/inox-8-imbuia-ouro-v2.jpg",
+  },
+  {
+    n: "003/40", modelo: "Fulltang", pol: 8, cabo: "Madeira imbuia com resina", preco: 239.9,
+    nome: 'Inox 8" · imbuia com resina',
+    detalhe: "Cabo em imbuia escura com anel de resina clara entre filetes pretos.",
+    img: "produtos/inox-8-imbuia-prata-v2.jpg",
+  },
+  {
+    n: "004/40", modelo: "Língua de ximango", pol: 8, cabo: "Madeira imbuia com resina", preco: 229.9,
+    nome: 'Inox 8" rústica · cabo escuro',
+    detalhe: "Lâmina com casca de forja e fio polido. Cabo escuro com faixa clara e virola de alumínio.",
+    img: "produtos/inox-8r-a.jpg",
+  },
+  {
+    n: "005/40", modelo: "Língua de ximango", pol: 8, cabo: "Madeira imbuia com resina", preco: 229.9,
+    nome: 'Inox 8" rústica · imbuia',
+    detalhe: "Lâmina com casca de forja e fio polido. Cabo em imbuia de veio corrido, sem emenda.",
+    img: "produtos/inox-8r-b.jpg",
+  },
+  {
+    n: "006/40", modelo: "Língua de ximango", pol: 8, cabo: "Osso", preco: 229.9,
+    nome: 'Inox 8" rústica · cabo osso',
+    detalhe: "Lâmina com casca de forja e fio polido. Cabo em osso natural com base em madeira.",
+    img: "produtos/inox-8r-c.jpg",
+  },
+  {
+    n: "007/40", modelo: "Fulltang", pol: 9, cabo: "Madeira", preco: 239.9,
+    nome: 'Fulltang 9" · cabo madeira',
+    detalhe: "Espiga inteira com talas pinadas em latão. Lâmina alta com casca de forja no lombo.",
+    img: "produtos/fulltang-9-a.jpg",
+  },
+  {
+    n: "008/40", modelo: "Fulltang", pol: 9, cabo: "Madeira", preco: 239.9,
+    nome: 'Fulltang 9" · madeira clara',
+    detalhe: "Espiga inteira com três pinos de latão. Cabo de veio corrido e barriga marcada.",
+    img: "produtos/fulltang-9-b.jpg",
+  },
+  {
+    n: "009/40", modelo: "Fulltang", pol: 9, cabo: "Madeira", preco: 239.9,
+    nome: 'Fulltang 9" · madeira escura',
+    detalhe: "Espiga inteira com três pinos de latão. Lâmina mais larga, cabo em madeira escura.",
+    img: "produtos/fulltang-9-c.jpg",
+  },
+  {
+    n: "010/40", modelo: "Fulltang", pol: 7, cabo: "Madeira", preco: 189.9,
+    nome: 'Fulltang 7" · madeira figurada',
+    detalhe: "Guarda em latão gravado, pinos de latão e bainha de couro inclusa.",
+    img: "produtos/fulltang-7-a.jpg",
+  },
+  {
+    n: "011/40", modelo: "Fulltang", pol: 7, cabo: "Madeira", preco: 189.9,
+    nome: 'Fulltang 7" · madeira clara',
+    detalhe: "Guarda em latão gravado e cabo de veio aberto. Bainha de couro inclusa.",
+    img: "produtos/fulltang-7-b.jpg",
+  },
+  {
+    n: "012/40", modelo: "Fulltang", pol: 7, cabo: "Madeira", preco: 189.9,
+    nome: 'Fulltang 7" · madeira escura',
+    detalhe: "Guarda em latão gravado e cabo em madeira escura. Bainha de couro inclusa.",
+    img: "produtos/fulltang-7-c.jpg",
+  },
+].map((p, i) => ({
+  ...p,
+  id: i,
+  slot: "inox-p" + (i + 1),
+  spec: 'Inox · ' + p.pol + '" (' + MM[p.pol] + "mm) · " + p.modelo.toLowerCase() + " · cabo em " + p.cabo.toLowerCase(),
+  precoBR: "R$ " + p.preco.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+}));
+
+const unicos = (campo) => PECAS.map((p) => p[campo]).filter((v, i, a) => a.indexOf(v) === i);
+
+function ler() { try { return JSON.parse(localStorage.getItem(LS) || "[]"); } catch (e) { return []; } }
+
+class Component extends DCLogic {
+  state = { itens: [], guardadas: {}, toast: "", modelo: "todos", pol: "todas", cabo: "todos" };
+
+  componentDidMount() { this.setState({ itens: ler() }); }
+  componentWillUnmount() { clearTimeout(this._t); }
+
+  reservar(p) {
+    const itens = ler().concat([{ n: p.n, nome: p.nome, spec: p.spec, preco: p.preco }]);
+    localStorage.setItem(LS, JSON.stringify(itens));
+    this.setState({ itens, toast: p.nome + " adicionada à sacola." });
+    clearTimeout(this._t);
+    this._t = setTimeout(() => this.setState({ toast: "" }), 4200);
+  }
+
+  guardar(id) {
+    this.setState((s) => {
+      const g = Object.assign({}, s.guardadas);
+      g[id] = !g[id];
+      return { guardadas: g };
+    });
+  }
+
+  chips(campo, valores, atual, rotuloTodos) {
+    return [{ v: campo === "pol" ? "todas" : "todos", label: rotuloTodos }]
+      .concat(valores.map((v) => ({ v, label: campo === "pol" ? v + '"' : v })))
+      .map((c) => {
+        const ativo = String(atual) === String(c.v);
+        return {
+          label: c.label,
+          cor: ativo ? "var(--osso)" : "var(--text-secondary)",
+          fundo: ativo ? "var(--carbono-alt)" : "transparent",
+          borda: ativo ? "var(--prata)" : "var(--linha-forte)",
+          acao: () => this.setState({ [campo]: c.v }),
+        };
+      });
+  }
+
+  renderVals() {
+    const { itens, guardadas, toast, modelo, pol, cabo } = this.state;
+    const visiveis = PECAS
+      .filter((p) => modelo === "todos" || p.modelo === modelo)
+      .filter((p) => pol === "todas" || String(p.pol) === String(pol))
+      .filter((p) => cabo === "todos" || p.cabo === cabo)
+      .sort((a, b) => a.pol - b.pol || a.preco - b.preco);
+
+    return {
+      sacolaLabel: "Sacola (" + itens.length + ")",
+      toastAberto: !!toast,
+      toastTexto: toast,
+      fecharToast: () => this.setState({ toast: "" }),
+      chipsModelo: this.chips("modelo", unicos("modelo"), modelo, "Todos os modelos"),
+      chipsPolegada: this.chips("pol", unicos("pol").slice().sort((a, b) => a - b), pol, "Todas"),
+      chipsCabo: this.chips("cabo", unicos("cabo"), cabo, "Todos"),
+      temFiltro: modelo !== "todos" || pol !== "todas" || cabo !== "todos",
+      limpar: () => this.setState({ modelo: "todos", pol: "todas", cabo: "todos" }),
+      contagem: visiveis.length + (visiveis.length === 1 ? " peça disponível" : " peças disponíveis"),
+      vazio: visiveis.length === 0,
+      itens: visiveis.map((p) => ({
+        n: p.n,
+        nome: p.nome,
+        spec: p.spec,
+        detalhe: p.detalhe,
+        preco: p.precoBR,
+        img: p.img,
+        slot: p.slot,
+        rotulo: guardadas[p.id] ? "Guardada" : "Guardar",
+        reservar: () => this.reservar(p),
+        guardar: () => this.guardar(p.id),
+      })),
+    };
+  }
+}
+</script>
+</body>
+</html>

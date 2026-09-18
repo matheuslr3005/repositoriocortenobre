@@ -1,0 +1,59 @@
+/* Paleta material: seis cores ligadas a materiais reais da facataria + duas de apoio. */
+:root {
+  /* base */
+  --carbono: #17150F;
+  --carbono-alt: #201D16;
+  --aco: #726F64;
+  --osso: #EDE6D6;
+  --osso-dim: #B9B2A1;
+  --couro: #3D2A1C;
+  --brasa: #B1531F;
+  --prata: #C9C6BB;
+  --linha: rgba(201, 198, 187, 0.18);
+
+  /* estados da brasa (derivados — não estavam no guia original) */
+  --brasa-hover: #C86227;
+  --brasa-press: #94420F;
+  --brasa-fosca: rgba(177, 83, 31, 0.14);
+
+  /* linhas em variações de força */
+  --linha-forte: rgba(201, 198, 187, 0.34);
+  --linha-fraca: rgba(201, 198, 187, 0.09);
+
+  /* superfícies */
+  --surface-base: var(--carbono);
+  --surface-raised: var(--carbono-alt);
+  --surface-couro: var(--couro);
+  --surface-clara: var(--osso);
+  --surface-accent-fosca: var(--brasa-fosca);
+
+  /* texto sobre fundo escuro */
+  --text-primary: var(--osso);
+  --text-secondary: var(--osso-dim);
+  --text-muted: var(--aco); /* apoio/ícones e rótulos grandes — não para corpo de texto longo */
+  --text-accent: var(--brasa);
+
+  /* texto sobre fundo claro (Osso) */
+  --text-on-light: var(--carbono);
+  --text-on-light-secondary: #5A564B;
+
+  /* interativos */
+  --action-bg: var(--brasa);
+  --action-bg-hover: var(--brasa-hover);
+  --action-bg-press: var(--brasa-press);
+  --action-fg: var(--osso);
+  --action-quiet-fg: var(--osso);
+  --action-quiet-border: var(--linha-forte);
+
+  /* bordas e foco */
+  --border-default: var(--linha);
+  --border-strong: var(--linha-forte);
+  --focus-ring: var(--prata);
+
+  /* estados de formulário */
+  --field-bg: var(--carbono-alt);
+  --field-border: var(--linha);
+  --field-border-focus: var(--prata);
+  --field-placeholder: var(--aco);
+  --state-disabled-fg: var(--aco);
+}

@@ -1,0 +1,53 @@
+/* Escala tipográfica — valores exatos do guia de identidade, sem arredondar. */
+:root {
+  /* tamanhos */
+  --text-hero: clamp(40px, 6vw, 68px);
+  --text-display: 52px;
+  --text-display-sm: 44px;
+  --text-secao: 30px;
+  --text-titulo-1: 32px;
+  --text-titulo-2: 22px;
+  --text-lead: 19px;
+  --text-corpo: 17px;
+  --text-corpo-sm: 16px;
+  --text-rotulo: 16px;
+  --text-caption: 14.5px;
+  --text-kicker: 14px;
+  --text-legenda: 13px;
+  --text-micro: 13.5px;
+
+  /* pesos */
+  --weight-leve: 300;
+  --weight-regular: 400;
+  --weight-medio: 500;
+  --weight-forte: 600;
+
+  /* entrelinha */
+  --leading-hero: 1.05;
+  --leading-display: 1.1;
+  --leading-titulo: 1.2;
+  --leading-corpo: 1.6;
+  --leading-compacto: 1.5;
+  --leading-apoio: 1.55;
+
+  /* tracking */
+  --tracking-kicker: 0.04em;
+  --tracking-normal: 0;
+
+  /* medidas de linha */
+  --measure-hero: 11ch;
+  --measure-lead: 56ch;
+  --measure-corpo: 62ch;
+  --measure-amostra: 52ch;
+
+  /* papéis semânticos */
+  --type-hero: var(--weight-leve) var(--text-hero) / var(--leading-hero) var(--font-display);
+  --type-display: var(--weight-leve) var(--text-display) / var(--leading-display) var(--font-display);
+  --type-secao: var(--weight-regular) var(--text-secao) / var(--leading-titulo) var(--font-display);
+  --type-titulo-2: var(--weight-regular) var(--text-titulo-2) / var(--leading-titulo) var(--font-display);
+  --type-rotulo: var(--weight-forte) var(--text-rotulo) / var(--leading-compacto) var(--font-body);
+  --type-lead: var(--weight-regular) var(--text-lead) / var(--leading-corpo) var(--font-body);
+  --type-corpo: var(--weight-regular) var(--text-corpo) / var(--leading-corpo) var(--font-body);
+  --type-caption: var(--weight-regular) var(--text-caption) / var(--leading-apoio) var(--font-body);
+  --type-legenda: var(--weight-regular) var(--text-legenda) / var(--leading-compacto) var(--font-body);
+}

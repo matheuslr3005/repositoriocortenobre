@@ -1,0 +1,6 @@
+/* Grão fixo sobre toda a página — aço escovado / couro. Nunca acima de 0.05. */
+:root {
+  --textura-grao: url("../assets/textura-grao.svg"); /* @kind other */
+  --textura-opacidade: 0.05; /* @kind other */
+  --textura-tile: 120px 120px; /* @kind spacing */
+}

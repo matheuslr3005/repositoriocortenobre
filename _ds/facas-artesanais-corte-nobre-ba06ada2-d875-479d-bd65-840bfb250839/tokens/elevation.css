@@ -1,0 +1,15 @@
+/* Sem sombras. A profundidade vem de troca de superfície (Carbono → Carbono Alt)
+   e de filetes de 1px. Os tokens existem para que "elevação" tenha uma resposta
+   explícita em vez de virar box-shadow improvisado. */
+:root {
+  --shadow-none: none;
+  --elev-0: var(--surface-base);
+  --elev-1: var(--surface-raised);
+
+  /* gradiente de proteção para texto sobre fotografia (macro de produto) */
+  --protecao-baixo: linear-gradient(to top, rgba(23, 21, 15, 0.92) 0%, rgba(23, 21, 15, 0.55) 45%, rgba(23, 21, 15, 0) 100%); /* @kind other */
+  --protecao-alto: linear-gradient(to bottom, rgba(23, 21, 15, 0.85) 0%, rgba(23, 21, 15, 0) 100%); /* @kind other */
+
+  /* véu para imagem de fundo full-bleed */
+  --veu-carbono: rgba(23, 21, 15, 0.62);
+}

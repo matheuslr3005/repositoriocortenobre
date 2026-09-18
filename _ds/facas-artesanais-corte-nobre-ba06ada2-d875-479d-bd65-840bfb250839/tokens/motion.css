@@ -1,0 +1,18 @@
+/* Movimento — não definido no guia original; derivado dos princípios
+   (Precisão, Discrição): apenas fade e deslizes curtos, nenhum bounce, nenhum overshoot. */
+:root {
+  /* padrão: entra rápido, assenta */
+  --ease-fio: cubic-bezier(0.2, 0, 0.2, 1); /* @kind other */
+  --ease-saida: cubic-bezier(0.4, 0, 1, 1); /* @kind other */
+  --ease-linear: linear; /* @kind other */
+
+  --dur-instantaneo: 90ms; /* @kind other */
+  --dur-rapido: 120ms; /* @kind other */
+  --dur-base: 200ms; /* @kind other */
+  --dur-lento: 320ms; /* @kind other */
+
+  --transicao-cor: color var(--dur-rapido) var(--ease-fio), background-color var(--dur-rapido) var(--ease-fio), border-color var(--dur-rapido) var(--ease-fio); /* @kind other */
+  --transicao-fade: opacity var(--dur-base) var(--ease-fio); /* @kind other */
+  /* nada se move no hover; só cor/opacidade */
+  --desloca-hover: 0; /* @kind other */
+}

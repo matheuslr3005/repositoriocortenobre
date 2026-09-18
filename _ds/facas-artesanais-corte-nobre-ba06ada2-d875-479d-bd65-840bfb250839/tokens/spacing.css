@@ -1,0 +1,53 @@
+/* Espaçamento — os passos realmente usados no guia, em px. */
+:root {
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-14: 14px;
+  --space-16: 16px;
+  --space-18: 18px;
+  --space-20: 20px;
+  --space-22: 22px;
+  --space-24: 24px;
+  --space-28: 28px;
+  --space-32: 32px;
+  --space-36: 36px;
+  --space-40: 40px;
+  --space-56: 56px;
+  --space-64: 64px;
+  --space-96: 96px;
+  --space-112: 112px;
+  --space-140: 140px;
+
+  /* layout de página */
+  --page-max: 920px;
+  --page-pad: 32px;
+  --page-pad-mobile: 20px;
+  --page-top: 96px;
+  --page-bottom: 140px;
+
+  /* ritmo */
+  --secao-gap: 112px;
+  --regra-gap: 56px;
+  --grid-gap: 20px;
+  --grid-gap-largo: 32px;
+  --grid-gap-brief: 40px;
+
+  /* preenchimentos de componente */
+  --pad-card-y: 22px;
+  --pad-card-x: 20px;
+  --pad-meta-card: 16px 18px 20px;
+  --pad-botao: 14px 24px;
+  --pad-botao-sm: 10px 16px;
+  --pad-campo: 12px 14px;
+  --pad-aplicacao: 20px 4px;
+
+  /* colunas mínimas dos grids do guia */
+  --col-min-pilar: 180px;
+  --col-min-swatch: 200px;
+  --col-min-material: 200px;
+  --col-min-aplicacao: 220px;
+}
