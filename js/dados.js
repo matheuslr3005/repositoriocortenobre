@@ -24,7 +24,7 @@ export const SHOPIFY = {
 
 export const CONTATO = {
   linkWhatsapp: 'https://w.app/uninqw', // link direto do WhatsApp Business, a conversa continua por lá
-  whatsappVisivel: '(00) 00000 0000',
+  whatsappVisivel: '(51) 99316-3033',
   email: 'contato@cortenobre.com.br',
   instagram: 'https://instagram.com/',
   instagramVisivel: '@cortenobre',

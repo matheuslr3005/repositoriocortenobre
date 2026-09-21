@@ -316,6 +316,7 @@ body.menu-aberto .menu-itens a > span { transform: none; }
   display: flex; flex-wrap: wrap; gap: 12px 28px;
   justify-content: space-between;
   padding-block: 22px 30px;
+  padding-right: 86px; /* espaço pro botão flutuante de WhatsApp não cobrir o último item */
   border-top: 1px solid var(--linha-fraca);
   font-size: 13px;
   color: var(--text-muted);
