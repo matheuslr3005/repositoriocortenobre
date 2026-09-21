@@ -26,8 +26,8 @@ export const CONTATO = {
   linkWhatsapp: 'https://w.app/uninqw', // link direto do WhatsApp Business, a conversa continua por lá
   whatsappVisivel: '(51) 99316-3033',
   email: 'contato@cortenobre.com.br',
-  instagram: 'https://instagram.com/',
-  instagramVisivel: '@cortenobre',
+  instagram: 'https://www.instagram.com/facascortenobre/',
+  instagramVisivel: '@facascortenobre',
   horario: 'Segunda a sexta, 9h às 18h',
   agendamento: 'Sábado sob agendamento',
 };
