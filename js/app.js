@@ -308,7 +308,7 @@ function ligarGlobais() {
 
   $$('[data-contato]').forEach((el) => {
     const campo = el.dataset.contato;
-    if (campo === 'whatsapp-link') el.href = `https://wa.me/${CONTATO.whatsapp}`;
+    if (campo === 'whatsapp-link') el.href = CONTATO.linkWhatsapp;
     else if (campo === 'whatsapp') el.textContent = CONTATO.whatsappVisivel;
     else if (campo === 'email') { el.textContent = CONTATO.email; if (el.tagName === 'A') el.href = `mailto:${CONTATO.email}`; }
     else if (campo === 'instagram') { el.textContent = CONTATO.instagramVisivel; el.href = CONTATO.instagram; }

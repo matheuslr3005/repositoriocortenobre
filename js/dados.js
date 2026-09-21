@@ -23,7 +23,7 @@ export const SHOPIFY = {
 };
 
 export const CONTATO = {
-  whatsapp: '5500000000000',          // formato internacional, só dígitos
+  linkWhatsapp: 'https://w.app/uninqw', // link direto do WhatsApp Business, a conversa continua por lá
   whatsappVisivel: '(00) 00000 0000',
   email: 'contato@cortenobre.com.br',
   instagram: 'https://instagram.com/',

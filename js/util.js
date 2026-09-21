@@ -26,6 +26,6 @@ export function avisar(texto, tom = 'normal') {
 }
 
 export function abrirWhatsapp(texto) {
-  const url = `https://wa.me/${CONTATO.whatsapp}?text=${encodeURIComponent(texto)}`;
+  const url = `${CONTATO.linkWhatsapp}?text=${encodeURIComponent(texto)}`;
   window.open(url, '_blank', 'noopener');
 }
