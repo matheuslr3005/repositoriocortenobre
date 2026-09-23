@@ -77,7 +77,7 @@ export const PECAS = [
   {
     id: 'fulltang-9-madeira',
     nome: 'Fulltang 9" · cabo madeira',
-    aco: 'inox',
+    aco: 'carbono',
     modelo: 'fulltang',
     polegadas: 9,
     lamina: '9" (229mm)',
