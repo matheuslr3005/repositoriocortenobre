@@ -37,7 +37,7 @@ const F = (nome) => `img/${nome}.webp`;
 export const PECAS = [
   {
     id: 'ximango-8-osso',
-    nome: 'Ximango 8" · cabo osso',
+    nome: 'Língua de Ximango 8" · cabo osso',
     aco: 'inox',
     modelo: 'ximango',
     polegadas: 8,
@@ -45,12 +45,12 @@ export const PECAS = [
     cabo: 'osso',
     caboRotulo: 'Osso',
     detalhe: 'Virola de alumínio e topo em acrílico preto.',
-    preco: 23990,
+    preco: 22990,
     fotos: [F('inox-8-osso-v2')],
   },
   {
     id: 'ximango-8-imbuia-ouro',
-    nome: 'Ximango 8" · imbuia com folha de ouro',
+    nome: 'Língua de Ximango 8" · imbuia com folha de ouro',
     aco: 'inox',
     modelo: 'ximango',
     polegadas: 8,
@@ -58,12 +58,12 @@ export const PECAS = [
     cabo: 'madeira',
     caboRotulo: 'Imbuia com resina',
     detalhe: 'Anel de resina com folha de ouro entre filetes pretos.',
-    preco: 23990,
+    preco: 22990,
     fotos: [F('inox-8-imbuia-ouro-v2'), F('inox-8-imbuia-ouro-v2-b')],
   },
   {
     id: 'ximango-8-imbuia-prata',
-    nome: 'Ximango 8" · imbuia com anel claro',
+    nome: 'Língua de Ximango 8" · imbuia com anel claro',
     aco: 'inox',
     modelo: 'ximango',
     polegadas: 8,
@@ -71,7 +71,7 @@ export const PECAS = [
     cabo: 'madeira',
     caboRotulo: 'Imbuia com resina',
     detalhe: 'Anel de resina clara entre filetes pretos.',
-    preco: 23990,
+    preco: 22990,
     fotos: [F('inox-8-imbuia-prata-v2'), F('inox-8-imbuia-prata-v2-b')],
   },
   {
@@ -102,7 +102,7 @@ export const PECAS = [
   },
   {
     id: 'forjada-8-chifre',
-    nome: 'Ximango 8" forjada · cabo chifre',
+    nome: 'Língua de Ximango 8" forjada · cabo chifre',
     aco: 'inox',
     modelo: 'ximango',
     polegadas: 8,
@@ -115,7 +115,7 @@ export const PECAS = [
   },
   {
     id: 'forjada-8-madeira',
-    nome: 'Ximango 8" forjada · cabo madeira',
+    nome: 'Língua de Ximango 8" forjada · cabo madeira',
     aco: 'inox',
     modelo: 'ximango',
     polegadas: 8,
@@ -128,7 +128,7 @@ export const PECAS = [
   },
   {
     id: 'forjada-8-osso',
-    nome: 'Ximango 8" forjada · cabo osso',
+    nome: 'Língua de Ximango 8" forjada · cabo osso',
     aco: 'inox',
     modelo: 'ximango',
     polegadas: 8,
@@ -154,7 +154,7 @@ export const PECAS = [
   },
   {
     id: 'carbono-12-ximango',
-    nome: 'Ximango 12" · aço carbono',
+    nome: 'Língua de Ximango 12" · aço carbono',
     aco: 'carbono',
     modelo: 'ximango',
     polegadas: 12,
