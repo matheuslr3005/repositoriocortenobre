@@ -243,7 +243,7 @@
   transition: opacity 420ms var(--fio), transform 800ms var(--saida);
   opacity: 0;
 }
-.peca-foto img.ativa { opacity: 1; }
+.peca-foto img.ativa { opacity: 1; cursor: zoom-in; }
 .peca:hover .peca-foto img.ativa { transform: translateY(-8px) scale(1.03); }
 .peca-foto::after {
   content: "";

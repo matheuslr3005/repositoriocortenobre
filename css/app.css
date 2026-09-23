@@ -168,6 +168,30 @@ body.menu-aberto .menu-itens a > span { transform: none; }
 }
 .painel.aberto { transform: none; visibility: visible; }
 .painel-largo { width: min(680px, 100vw); }
+.lightbox {
+  left: 0;
+  width: auto;
+  border-left: none;
+  background: rgba(10, 9, 6, 0.92);
+  backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  padding: clamp(20px, 5vw, 64px);
+  transform: none;
+  opacity: 0;
+  transition: opacity 380ms var(--fio), visibility 380ms;
+}
+.lightbox.aberto { opacity: 1; }
+.lightbox .fechar { position: absolute; top: 18px; right: 18px; z-index: 2; }
+.lightbox-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65);
+  cursor: zoom-out;
+}
 .painel-topo {
   display: flex;
   align-items: center;
@@ -231,7 +255,7 @@ body.menu-aberto .menu-itens a > span { transform: none; }
   transform: scale(1.04);
   transition: opacity 520ms var(--fio), transform 900ms var(--saida);
 }
-.ficha-galeria img.ativa { opacity: 1; transform: none; }
+.ficha-galeria img.ativa { opacity: 1; transform: none; cursor: zoom-in; }
 .ficha-miniaturas { display: flex; gap: 8px; margin-top: 10px; }
 .ficha-miniaturas button {
   width: 54px; aspect-ratio: 3/4;

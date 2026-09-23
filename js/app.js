@@ -132,6 +132,16 @@ export function fecharPainel() {
   painelAberto = null;
 }
 
+/* ---------- foto ampliada ---------- */
+export function abrirLightbox(src, alt) {
+  const lightbox = $('#lightbox');
+  const img = $('#lightbox-img');
+  if (!lightbox || !img || !src) return;
+  img.src = src;
+  img.alt = alt || '';
+  abrirPainel(lightbox);
+}
+
 /* ---------- desenho da sacola ---------- */
 function pintarSacola() {
   const corpo = $('#sacola-corpo');
@@ -309,7 +319,12 @@ function ligarGlobais() {
     if (ficha) { e.preventDefault(); abrirFicha(ficha.dataset.ficha); }
     const zap = e.target.closest('[data-whatsapp]');
     if (zap) { e.preventDefault(); abrirWhatsapp(zap.dataset.whatsapp || 'Olá! Vim pelo site da Corte Nobre.'); }
+    /* clicar na foto do produto (catálogo ou ficha) amplia, sem abrir painel de detalhes */
+    const foto = e.target.closest('.peca-foto img.ativa, .ficha-galeria img.ativa');
+    if (foto) { e.preventDefault(); abrirLightbox(foto.src, foto.alt); }
+    if (e.target.closest('.lightbox-img')) fecharPainel();
   });
+  $('#lightbox')?.addEventListener('click', (e) => { if (e.target.id === 'lightbox') fecharPainel(); });
 
   $$('[data-contato]').forEach((el) => {
     const campo = el.dataset.contato;
