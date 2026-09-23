@@ -25,8 +25,10 @@ async function montar() {
   const estado = { modelo: null, polegadas: null, cabo: null };
 
   const disponivel = (campo) => new Set(lista.map((p) => String(p[campo])));
+  const semFiltro = new Set((grade.dataset.esconderFiltro || '').split(',').filter(Boolean));
 
   const grupo = (campo, rotulo) => {
+    if (semFiltro.has(campo)) return '';
     const opcoes = FILTROS[campo].filter((o) => disponivel(campo).has(o.valor));
     if (opcoes.length < 2) return '';
     return `

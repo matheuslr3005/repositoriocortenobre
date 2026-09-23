@@ -8,7 +8,7 @@ const meia = (f) => (f.startsWith('img/') ? f.replace(/\.webp$/, '@half.webp') :
 export function cartaoPeca(p, { etiqueta = true } = {}) {
   const fotos = p.fotos.map((f, i) =>
     `<img src="${f}" ${f.startsWith('img/') ? `srcset="${meia(f)} 700w, ${f} 1400w" sizes="(max-width: 620px) 46vw, 300px"` : ''}
-          alt="${p.nome}" class="${i === 0 ? 'ativa' : ''}" loading="lazy" decoding="async" width="300" height="420">`
+          alt="${p.nome}" class="${i === 0 ? 'ativa' : ''}" loading="lazy" decoding="async" width="300" height="169">`
   ).join('');
 
   const pontos = p.fotos.length > 1
