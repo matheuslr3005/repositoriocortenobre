@@ -59,7 +59,7 @@ export const PECAS = [
     caboRotulo: 'Madeira imbuia com resina',
     detalhe: 'Anel de resina com folha de ouro entre filetes pretos.',
     preco: 22990,
-    fotos: [F('inox-8-imbuia-ouro-v2'), F('inox-8-imbuia-ouro-v2-b')],
+    fotos: [F('inox-8-imbuia-ouro-v2-b')],
   },
   {
     id: 'ximango-8-imbuia-prata',
@@ -72,7 +72,7 @@ export const PECAS = [
     caboRotulo: 'Madeira imbuia com resina',
     detalhe: 'Anel de resina clara entre filetes pretos.',
     preco: 22990,
-    fotos: [F('inox-8-imbuia-prata-v2'), F('inox-8-imbuia-prata-v2-b')],
+    fotos: [F('inox-8-imbuia-prata-v2-b')],
   },
   {
     id: 'fulltang-9-madeira',
