@@ -223,6 +223,11 @@ function ligarSacola() {
 
   $('#fechar-pedido')?.addEventListener('click', () => sacola.finalizar());
   document.addEventListener('sacola:muda', pintarSacola);
+  /* o cabeçalho some ao rolar a página pra baixo (função cabecalho() acima).
+     Sem isso, quem adiciona uma peça rolado lá embaixo não acha o botão da
+     sacola: ele existe só dentro do cabeçalho, que fica fora da tela até
+     rolar pra cima de novo. */
+  document.addEventListener('sacola:muda', () => $('.cabecalho')?.classList.remove('escondido'));
   pintarSacola();
 }
 
@@ -332,7 +337,9 @@ function transicao() {
   if (calmo || !$('.cortina')) return;
   document.addEventListener('click', (e) => {
     const link = e.target.closest('a[href]');
-    if (!link) return;
+    /* defaultPrevented: outro clique (ex.: o botão da sacola, que abre um
+       painel em vez de navegar) já decidiu tratar esse clique sozinho. */
+    if (!link || e.defaultPrevented) return;
     const url = new URL(link.href, location.href);
     const interno = url.origin === location.origin && !link.target && !link.hasAttribute('download');
     const mesmaPagina = url.pathname === location.pathname && url.hash;
