@@ -15,6 +15,7 @@ const versao = Date.now().toString(36);
 const mapa = {
   'faca-de-inox': 'inox',
   'faca-de-carbono': 'carbono',
+  'faca-fulltang': 'fulltang',
   empresarial: 'empresarial',
   cuidados: 'cuidados',
   contato: 'contato',

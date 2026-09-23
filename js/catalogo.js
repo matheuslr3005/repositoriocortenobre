@@ -15,7 +15,8 @@ async function montar() {
   grade.removeAttribute('aria-busy');
 
   const aco = grade.dataset.aco;
-  const lista = aco ? pecas.filter((p) => p.aco === aco) : pecas;
+  const modeloFixo = grade.dataset.modelo;
+  const lista = pecas.filter((p) => (!aco || p.aco === aco) && (!modeloFixo || p.modelo === modeloFixo));
   grade.innerHTML = lista.map((p) => cartaoPeca(p, { etiqueta: !aco })).join('');
   ligarGalerias(grade);
 

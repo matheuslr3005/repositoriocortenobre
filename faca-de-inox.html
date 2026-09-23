@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Facas de aço inox · Corte Nobre</title>
-<meta name="description" content="Linha em aço inox de alta liga, temperada entre 58 e 60 HRC. Fulltang e língua de ximango, cabos em osso, chifre e madeira. Filtre por lâmina, modelo e cabo.">
+<meta name="description" content="Linha em aço inox de alta liga, temperada entre 58 e 60 HRC. Língua de ximango, cabos em osso, chifre e madeira. Filtre por lâmina e cabo.">
 <meta name="theme-color" content="#17150F">
 <link rel="icon" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="favicon.png">
@@ -17,10 +17,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=Work+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="css/base.css?v=mueji4jj">
-<link rel="stylesheet" href="css/app.css?v=mueji4jj">
-<link rel="stylesheet" href="css/home.css?v=mueji4jj">
-<link rel="stylesheet" href="css/catalogo.css?v=mueji4jj">
+<link rel="stylesheet" href="css/base.css?v=muekanqq">
+<link rel="stylesheet" href="css/app.css?v=muekanqq">
+<link rel="stylesheet" href="css/home.css?v=muekanqq">
+<link rel="stylesheet" href="css/catalogo.css?v=muekanqq">
 <script type="module" src="js/app.js"></script>
 <script type="module" src="js/catalogo.js"></script>
 </head>
@@ -39,6 +39,7 @@
     <nav class="nav" aria-label="Principal">
       <a href="faca-de-inox.html" data-pagina="inox" aria-current="page">Aço inox</a>
       <a href="faca-de-carbono.html" data-pagina="carbono">Aço carbono</a>
+      <a href="faca-fulltang.html" data-pagina="fulltang">Fulltang</a>
       <a href="empresarial.html" data-pagina="empresarial">Empresarial</a>
       <a href="cuidados.html" data-pagina="cuidados">Cuidados</a>
       <a href="contato.html" data-pagina="contato">Contato</a>
@@ -62,9 +63,10 @@
     <a href="index.html" style="--i:0"><span>Início</span></a>
     <a href="faca-de-inox.html" style="--i:1"><span>Aço inox</span></a>
     <a href="faca-de-carbono.html" style="--i:2"><span>Aço carbono</span></a>
-    <a href="empresarial.html" style="--i:3"><span>Empresarial</span></a>
-    <a href="cuidados.html" style="--i:4"><span>Cuidados</span></a>
-    <a href="contato.html" style="--i:5"><span>Contato</span></a>
+    <a href="faca-fulltang.html" style="--i:3"><span>Fulltang</span></a>
+    <a href="empresarial.html" style="--i:4"><span>Empresarial</span></a>
+    <a href="cuidados.html" style="--i:5"><span>Cuidados</span></a>
+    <a href="contato.html" style="--i:6"><span>Contato</span></a>
   </nav>
   <div class="menu-rodape">
     <a class="link-fio" data-contato="whatsapp-link" href="#">Chamar no WhatsApp</a>
@@ -81,7 +83,7 @@
         <div>
           <p class="kicker">Linha inox</p>
           <h1>Facas de aço inox</h1>
-          <p class="lead">Aço inox de alta liga, temperado entre 58 e 60 HRC. Resiste à umidade e à acidez sem perder o fio. Escolha a lâmina em polegadas, o modelo e o cabo.</p>
+          <p class="lead">Aço inox de alta liga, temperado entre 58 e 60 HRC. Resiste à umidade e à acidez sem perder o fio. Lâmina clara e refletiva, modelo língua de ximango. Escolha a lâmina em polegadas e o cabo.</p>
         </div>
         <figure class="topo-foto" data-reveal>
           <img src="img/trio-ponta.webp" srcset="img/trio-ponta@half.webp 700w, img/trio-ponta.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" alt="Facas de inox alinhadas sobre a bancada" width="1400" height="2489" loading="eager">
@@ -93,7 +95,7 @@
   <div class="filtros" id="filtros"></div>
 
   <section class="wrap">
-    <div class="grade" id="grade" data-aco="inox"></div>
+    <div class="grade" id="grade" data-aco="inox" data-modelo="ximango"></div>
 
     <div class="vazio" id="vazio" hidden>
       <h3>Nenhuma peça nesta combinação</h3>
@@ -110,21 +112,21 @@
       <div class="duas">
         <div>
           <p class="kicker" data-reveal style="margin-bottom:18px">Como escolher</p>
-          <h2 class="titulo-secao" data-reveal>Dois modelos, três cabos</h2>
-          <p class="corpo" data-reveal style="margin-top:18px">A diferença entre eles está na espiga: a parte da lâmina que entra no cabo. É ela que define o peso na mão.</p>
+          <h2 class="titulo-secao" data-reveal>Um modelo, três cabos</h2>
+          <p class="corpo" data-reveal style="margin-top:18px">Toda a linha inox é língua de ximango: espiga afilada embutida no cabo maciço, lâmina clara e refletiva. Quer mais peso na mão? Veja a <a class="link-fio" href="faca-fulltang.html">linha fulltang</a>.</p>
         </div>
         <dl class="lista-marcada" data-escala="80">
           <div data-reveal>
-            <dt>Fulltang</dt>
-            <dd>Espiga inteira, do fio ao pomo, com as talas do cabo pinadas nas laterais. Mais peso e mais equilíbrio na mão.</dd>
-          </div>
-          <div data-reveal>
             <dt>Língua de ximango</dt>
-            <dd>Espiga afilada embutida no cabo maciço. Linha mais leve e enxuta, com o cabo em peça única.</dd>
+            <dd>Espiga afilada embutida no cabo maciço. Linha leve e enxuta, com o cabo em peça única.</dd>
           </div>
           <div data-reveal>
             <dt>Cabos</dt>
             <dd>Madeira estabilizada, osso, chifre ou imbuia com resina e folha de ouro. Cada cabo é ajustado à peça.</dd>
+          </div>
+          <div data-reveal>
+            <dt>Acabamento</dt>
+            <dd>Lâmina clara e refletiva, o brilho característico do aço inox polido.</dd>
           </div>
         </dl>
       </div>
@@ -183,6 +185,7 @@
         <ul>
           <li><a class="link-fio" href="faca-de-inox.html">Aço inox</a></li>
           <li><a class="link-fio" href="faca-de-carbono.html">Aço carbono</a></li>
+          <li><a class="link-fio" href="faca-fulltang.html">Fulltang</a></li>
           <li><a class="link-fio" href="empresarial.html">Empresarial</a></li>
           <li><a class="link-fio" href="sacola.html">Sacola</a></li>
         </ul>
