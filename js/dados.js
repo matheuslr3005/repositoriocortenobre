@@ -37,7 +37,7 @@ const F = (nome) => `img/${nome}.webp`;
 export const PECAS = [
   {
     id: 'ximango-8-osso',
-    nome: 'Língua de Ximango 8" · cabo osso',
+    nome: 'Faca Inox 8" · cabo osso',
     aco: 'inox',
     modelo: 'ximango',
     polegadas: 8,
@@ -50,7 +50,7 @@ export const PECAS = [
   },
   {
     id: 'ximango-8-imbuia-ouro',
-    nome: 'Língua de Ximango 8" · madeira imbuia com folha de ouro',
+    nome: 'Faca Inox 8" · madeira imbuia com folha de ouro',
     aco: 'inox',
     modelo: 'ximango',
     polegadas: 8,
@@ -63,7 +63,7 @@ export const PECAS = [
   },
   {
     id: 'ximango-8-imbuia-prata',
-    nome: 'Língua de Ximango 8" · madeira imbuia com anel claro',
+    nome: 'Faca Inox 8" · madeira imbuia com anel claro',
     aco: 'inox',
     modelo: 'ximango',
     polegadas: 8,
@@ -151,19 +151,6 @@ export const PECAS = [
     detalhe: 'Lâmina forjada com gravação. Cabo em chifre escuro com virola de alumínio.',
     preco: 19990,
     fotos: [F('carbono-9-a2')],
-  },
-  {
-    id: 'carbono-8-ximango',
-    nome: 'Língua de Ximango 8" · aço carbono',
-    aco: 'carbono',
-    modelo: 'ximango',
-    polegadas: 8,
-    lamina: '8" (203mm)',
-    cabo: 'chifre',
-    caboRotulo: 'Chifre, madeira ou osso',
-    detalhe: 'Lâmina de desossa em carbono forjado. Cabo escolhido a cada peça.',
-    preco: null,
-    fotos: [F('ximango-carbono-12'), F('ximango-carbono-12-osso')],
   },
 ];
 
