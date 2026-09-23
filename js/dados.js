@@ -59,7 +59,7 @@ export const PECAS = [
     caboRotulo: 'Imbuia com resina',
     detalhe: 'Anel de resina com folha de ouro entre filetes pretos.',
     preco: 23990,
-    fotos: [F('inox-8-imbuia-ouro-v2')],
+    fotos: [F('inox-8-imbuia-ouro-v2'), F('inox-8-imbuia-ouro-v2-b')],
   },
   {
     id: 'ximango-8-imbuia-prata',
@@ -72,7 +72,7 @@ export const PECAS = [
     caboRotulo: 'Imbuia com resina',
     detalhe: 'Anel de resina clara entre filetes pretos.',
     preco: 23990,
-    fotos: [F('inox-8-imbuia-prata-v2')],
+    fotos: [F('inox-8-imbuia-prata-v2'), F('inox-8-imbuia-prata-v2-b')],
   },
   {
     id: 'fulltang-9-madeira',
@@ -85,7 +85,7 @@ export const PECAS = [
     caboRotulo: 'Madeira estabilizada',
     detalhe: 'Espiga inteira com talas pinadas em latão.',
     preco: 23990,
-    fotos: [F('fulltang-9-a'), F('fulltang-9-b'), F('fulltang-9-c')],
+    fotos: [F('fulltang-9-a'), F('fulltang-9-b'), F('fulltang-9-c'), F('fulltang-9-d')],
   },
   {
     id: 'fulltang-7-figurada',
@@ -124,7 +124,7 @@ export const PECAS = [
     caboRotulo: 'Madeira estabilizada',
     detalhe: 'Lâmina com acabamento de forja e lombo entalhado. Virola de alumínio.',
     preco: null,
-    fotos: [F('inox-8r-b')],
+    fotos: [F('inox-8r-b'), F('inox-8r-b-2')],
   },
   {
     id: 'forjada-8-osso',
@@ -137,7 +137,7 @@ export const PECAS = [
     caboRotulo: 'Osso',
     detalhe: 'Lâmina com acabamento de forja e lombo entalhado. Virola de alumínio.',
     preco: null,
-    fotos: [F('inox-8r-c')],
+    fotos: [F('inox-8r-c'), F('inox-8r-c-2')],
   },
   {
     id: 'carbono-9-chifre',
@@ -163,7 +163,7 @@ export const PECAS = [
     caboRotulo: 'Chifre, madeira ou osso',
     detalhe: 'Lâmina longa de desossa em carbono forjado. Cabo escolhido a cada peça.',
     preco: null,
-    fotos: [F('ximango-carbono-12')],
+    fotos: [F('ximango-carbono-12'), F('ximango-carbono-12-osso')],
   },
 ];
 
