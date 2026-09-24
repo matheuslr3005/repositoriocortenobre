@@ -124,7 +124,7 @@ export const PECAS = [
     caboRotulo: 'Chifre escuro',
     detalhe: 'Lâmina forjada com gravação. Cabo em chifre escuro com virola de alumínio.',
     preco: 19990,
-    fotos: [F('carbono-9-a2')],
+    fotos: [F('carbono-9-b1'), F('carbono-9-b2'), F('carbono-9-b3')],
   },
   {
     id: 'carbono-bloco-madeira',
@@ -150,7 +150,7 @@ export const PECAS = [
     caboRotulo: 'Chifre claro',
     detalhe: 'Lâmina forjada com gravação. Cabo em chifre claro com virola de alumínio.',
     preco: null,
-    fotos: [F('carbono-tatu-chifre-claro')],
+    fotos: [F('carbono-tatu-chifre-claro'), F('carbono-tatu-chifre-claro-b')],
   },
   {
     id: 'carbono-gaucho-osso',
@@ -190,6 +190,19 @@ export const PECAS = [
     detalhe: 'Lâmina com gravação vazada em formato de chama. Cabo em chifre com espaçador de madeira.',
     preco: null,
     fotos: [F('carbono-chama-chifre')],
+  },
+  {
+    id: 'carbono-chama-osso-claro',
+    nome: 'Faca carbono · cabo osso claro, gravação chama',
+    aco: 'carbono',
+    modelo: 'ximango',
+    polegadas: 9,
+    lamina: '9" (229mm)',
+    cabo: 'osso',
+    caboRotulo: 'Osso claro',
+    detalhe: 'Lâmina com gravação vazada em formato de chama. Cabo em osso claro com espaçador de madeira.',
+    preco: null,
+    fotos: [F('carbono-chama-osso-claro')],
   },
   {
     id: 'carbono-madeira-notch',
