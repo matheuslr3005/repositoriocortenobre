@@ -98,7 +98,7 @@ export const PECAS = [
     caboRotulo: 'Madeira estabilizada',
     detalhe: 'Espiga inteira com talas pinadas em latão.',
     preco: 23990,
-    fotos: [F('fulltang-9-e')],
+    fotos: [F('fulltang-9-f'), F('fulltang-9-g'), F('fulltang-9-h')],
   },
   {
     id: 'fulltang-7-figurada',
