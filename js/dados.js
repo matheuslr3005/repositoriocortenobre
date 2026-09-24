@@ -84,7 +84,7 @@ export const PECAS = [
     cabo: 'madeira',
     caboRotulo: 'Madeira imbuia com resina',
     detalhe: 'Anel de resina com folha de ouro e filete turquesa.',
-    preco: null,
+    preco: 22990,
     fotos: [F('inox-8-imbuia-turquesa')],
   },
   {
@@ -111,7 +111,7 @@ export const PECAS = [
     caboRotulo: 'Madeira figurada',
     detalhe: 'Guarda em latão gravado e bainha de couro inclusa.',
     preco: 18990,
-    fotos: [F('fulltang-7-a'), F('fulltang-7-b'), F('fulltang-7-c')],
+    fotos: [F('fulltang-7-d'), F('fulltang-7-e'), F('fulltang-7-f')],
   },
   {
     id: 'carbono-9-chifre',
