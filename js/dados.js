@@ -230,6 +230,19 @@ export const PECAS = [
     preco: null,
     fotos: [F('carbono-osso-claro')],
   },
+  {
+    id: 'carbono-ram-chifre',
+    nome: 'Faca carbono · cabo chifre, gravação RAM',
+    aco: 'carbono',
+    modelo: 'ximango',
+    polegadas: 9,
+    lamina: '9" (229mm)',
+    cabo: 'chifre',
+    caboRotulo: 'Chifre',
+    detalhe: 'Lâmina com gravação vazada da marca RAM. Cabo em chifre com espaçador de madeira.',
+    preco: null,
+    fotos: [F('carbono-ram-chifre')],
+  },
 ];
 
 export const FILTROS = {
