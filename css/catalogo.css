@@ -86,7 +86,7 @@
 .gravacao {
   position: absolute;
   left: 34%;
-  top: var(--grav-y, 70%);
+  top: var(--grav-y, 38%);
   transform: translate(-50%, -50%) rotate(var(--grav-rot, 0deg));
   font-family: var(--font-display);
   font-weight: 400;
