@@ -262,7 +262,7 @@ export function abrirFicha(id) {
     <dl class="specs">
       <div><dt>Aço</dt><dd>${p.aco === 'inox' ? 'Inox de alta liga · 58 a 60 HRC' : 'Carbono forjado · 61 HRC'}</dd></div>
       ${p.lamina ? `<div><dt>Lâmina</dt><dd>${p.lamina}</dd></div>` : ''}
-      <div><dt>Modelo</dt><dd>${p.modelo === 'fulltang' ? 'Fulltang' : 'Língua de ximango'}</dd></div>
+      ${p.modelo === 'fulltang' ? '<div><dt>Modelo</dt><dd>Fulltang</dd></div>' : ''}
       <div><dt>Cabo</dt><dd>${p.caboRotulo}</dd></div>
       <div><dt>Afiação</dt><dd>${p.aco === 'inox' ? '15° a 20° por lado' : '12° por lado'}</dd></div>
       ${esgotada ? '<div><dt>Estoque</dt><dd>Esgotada no momento</dd></div>' : ''}

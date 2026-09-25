@@ -1,5 +1,5 @@
 /* Cartão de peça usado na home e nas páginas de catálogo. */
-import { precoFmt } from './dados.js';
+import { precoFmt, especFmt } from './dados.js';
 import { sacola, vendaAberta } from './sacola.js';
 
 /* cada foto local tem uma versão pela metade, gerada no processamento */
@@ -46,7 +46,7 @@ export function cartaoPeca(p, { etiqueta = true } = {}) {
       </div>
       <div class="peca-info">
         <h3>${p.nome}</h3>
-        <p class="peca-spec">${[p.lamina, p.caboRotulo].filter(Boolean).join(' · ')}</p>
+        <p class="peca-spec">${especFmt(p)}</p>
         ${p.detalhe ? `<p class="legenda" style="margin-bottom:4px">${p.detalhe}</p>` : ''}
         <div class="peca-pe">
           <span class="peca-preco">${risco}${precoFmt(p.preco)}</span>

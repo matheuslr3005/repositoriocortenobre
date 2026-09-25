@@ -5,7 +5,7 @@
    · local    lista guardada no navegador que fecha o pedido no WhatsApp
    O modo é escolhido no arranque, conforme js/dados.js tenha ou não a loja.
    ========================================================================== */
-import { acharPeca, precoFmt, pecasCarregadas, lojaEmPe } from './dados.js';
+import { acharPeca, precoFmt, pecasCarregadas, lojaEmPe, especFmt } from './dados.js';
 import { avisar, abrirWhatsapp, $, $$ } from './util.js';
 import * as loja from './shopify.js';
 
@@ -51,7 +51,7 @@ export const sacola = {
         preco: l.preco,
         qtd: l.qtd,
         foto: peca?.fotos?.[0] || l.foto,
-        detalhe: peca ? `${peca.lamina} · ${peca.caboRotulo}` : l.variante,
+        detalhe: peca ? especFmt(peca) : l.variante,
       };
     });
     this.pintarContador();
@@ -65,7 +65,7 @@ export const sacola = {
       .filter((i) => acharPeca(i.id))
       .map((i) => {
         const p = acharPeca(i.id);
-        return { id: p.id, nome: p.nome, preco: p.preco, qtd: i.qtd, foto: p.fotos[0], detalhe: `${p.lamina} · ${p.caboRotulo}` };
+        return { id: p.id, nome: p.nome, preco: p.preco, qtd: i.qtd, foto: p.fotos[0], detalhe: especFmt(p) };
       });
   },
 
@@ -83,7 +83,7 @@ export const sacola = {
     if (this.modo === 'local') {
       const existente = this.itens.find((i) => i.id === id);
       if (existente) existente.qtd += 1;
-      else this.itens.push({ id, nome: peca.nome, preco: peca.preco, qtd: 1, foto: peca.fotos[0], detalhe: `${peca.lamina} · ${peca.caboRotulo}` });
+      else this.itens.push({ id, nome: peca.nome, preco: peca.preco, qtd: 1, foto: peca.fotos[0], detalhe: especFmt(peca) });
       this.gravarNoNavegador();
       this.depois(`${peca.nome} foi para a sacola.`);
       return;

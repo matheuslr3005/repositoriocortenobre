@@ -25,7 +25,7 @@ export const SHOPIFY = {
 export const CONTATO = {
   linkWhatsapp: 'https://w.app/uninqw', // link direto do WhatsApp Business, a conversa continua por lá
   whatsappVisivel: '(51) 99316-3033',
-  email: 'contato@cortenobre.com.br',
+  email: 'contato@facascortenobre.com.br',
   instagram: 'https://www.instagram.com/facascortenobre/',
   instagramVisivel: '@facascortenobre',
   horario: 'Segunda a sexta, 9h às 18h',
@@ -33,6 +33,10 @@ export const CONTATO = {
 };
 
 const F = (nome) => `img/${nome}.webp`;
+
+/* linha padrão de especificação usada embaixo do nome da peça:
+   "Faca Inox 8" (203mm) · Madeira imbuia com resina" */
+export const especFmt = (p) => `Faca ${p.aco === 'inox' ? 'Inox' : 'Carbono'} ${p.lamina} · ${p.caboRotulo}`;
 
 export const PECAS = [
   {
@@ -154,7 +158,7 @@ export const PECAS = [
   },
   {
     id: 'carbono-gaucho-osso',
-    nome: 'Faca carbono · cabo osso, gravação gaúcho',
+    nome: 'Faca carbono · cabo osso',
     aco: 'carbono',
     modelo: 'ximango',
     polegadas: 9,
@@ -180,7 +184,7 @@ export const PECAS = [
   },
   {
     id: 'carbono-chama-chifre',
-    nome: 'Faca carbono · cabo chifre, gravação chama',
+    nome: 'Faca carbono · cabo chifre',
     aco: 'carbono',
     modelo: 'ximango',
     polegadas: 9,
@@ -193,7 +197,7 @@ export const PECAS = [
   },
   {
     id: 'carbono-chama-osso-claro',
-    nome: 'Faca carbono · cabo osso claro, gravação chama',
+    nome: 'Faca carbono · cabo osso claro',
     aco: 'carbono',
     modelo: 'ximango',
     polegadas: 9,
@@ -232,7 +236,7 @@ export const PECAS = [
   },
   {
     id: 'carbono-ram-chifre',
-    nome: 'Faca carbono · cabo chifre, gravação RAM',
+    nome: 'Faca carbono · cabo chifre',
     aco: 'carbono',
     modelo: 'ximango',
     polegadas: 9,
