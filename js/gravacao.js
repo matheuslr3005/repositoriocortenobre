@@ -9,7 +9,7 @@ function simulador() {
   const palco = $('#palco');
   if (!marca || !campo) return;
 
-  const estado = { tam: 32, pos: 34 };
+  const estado = { tam: 32, pos: 42 };
 
   const ajusta = () => {
     marca.textContent = campo.value.trim() || 'Sua marca';
