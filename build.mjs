@@ -30,7 +30,8 @@ const marcarNav = (html, pagina) => {
 const expandir = (html, pagina) =>
   html.replace(/<!--\s*incluir:([\w.-]+)\s*-->/g, (_, nome) => parte(nome))
       .replace(/\{\{pagina\}\}/g, pagina)
-      .replace(/href="(css\/[\w.-]+\.css)"/g, `href="$1?v=${versao}"`);
+      .replace(/href="(css\/[\w.-]+\.css)"/g, `href="$1?v=${versao}"`)
+      .replace(/src="(js\/[\w.-]+\.js)"/g, `src="$1?v=${versao}"`);
 
 let n = 0;
 for (const arquivo of readdirSync(src)) {

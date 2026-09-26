@@ -1,2 +1,16 @@
 [functions]
   directory = "netlify/functions"
+
+# Sem isso, o navegador pode guardar em cache uma versão antiga de um .js
+# (ex.: sacola.js) e o cliente não ver uma atualização mesmo depois do
+# deploy. "no-cache" não desliga o cache: só obriga o navegador a
+# confirmar com o servidor a cada carregamento antes de reusar o arquivo.
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "no-cache"
