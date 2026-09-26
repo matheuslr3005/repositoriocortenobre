@@ -113,7 +113,7 @@ export const PECAS = [
     cabo: 'madeira',
     caboRotulo: 'Madeira estabilizada',
     detalhe: 'Espiga inteira com talas pinadas em latão.',
-    preco: 23990,
+    preco: 19990,
     fotos: [F('fulltang-9-f')],
   },
   {
@@ -126,7 +126,7 @@ export const PECAS = [
     cabo: 'madeira',
     caboRotulo: 'Madeira estabilizada',
     detalhe: 'Espiga inteira com talas pinadas em latão.',
-    preco: null,
+    preco: 19990,
     fotos: [F('fulltang-9-g')],
   },
   {
@@ -139,7 +139,7 @@ export const PECAS = [
     cabo: 'madeira',
     caboRotulo: 'Madeira clara',
     detalhe: 'Espiga inteira com talas pinadas, virola de latão.',
-    preco: null,
+    preco: 19990,
     fotos: [F('fulltang-9-h')],
   },
   {
@@ -204,7 +204,7 @@ export const PECAS = [
     cabo: 'chifre',
     caboRotulo: 'Chifre escuro',
     detalhe: 'Lâmina forjada com gravação. Cabo em chifre escuro com virola de alumínio.',
-    preco: null,
+    preco: 19990,
     fotos: [F('carbono-9-b2')],
   },
   {
@@ -217,7 +217,7 @@ export const PECAS = [
     cabo: 'chifre',
     caboRotulo: 'Chifre escuro',
     detalhe: 'Lâmina forjada com gravação. Cabo em chifre escuro com virola de alumínio.',
-    preco: null,
+    preco: 19990,
     fotos: [F('carbono-9-b3')],
   },
   {
@@ -230,7 +230,7 @@ export const PECAS = [
     cabo: 'madeira',
     caboRotulo: 'Madeira',
     detalhe: 'Cabo em bloco maciço de madeira com virola de alumínio.',
-    preco: null,
+    preco: 19990,
     fotos: [F('carbono-bloco-madeira')],
   },
   {
@@ -243,7 +243,7 @@ export const PECAS = [
     cabo: 'chifre',
     caboRotulo: 'Chifre claro',
     detalhe: 'Lâmina forjada com gravação. Cabo em chifre claro com virola de alumínio.',
-    preco: null,
+    preco: 19990,
     fotos: [F('carbono-tatu-chifre-claro')],
   },
   {
@@ -256,7 +256,7 @@ export const PECAS = [
     cabo: 'chifre',
     caboRotulo: 'Chifre claro',
     detalhe: 'Lâmina forjada com gravação. Cabo em chifre claro com virola de alumínio.',
-    preco: null,
+    preco: 19990,
     fotos: [F('carbono-tatu-chifre-claro-b')],
   },
   {
@@ -269,7 +269,7 @@ export const PECAS = [
     cabo: 'osso',
     caboRotulo: 'Osso',
     detalhe: 'Lâmina forjada com gravação de gaúcho laçando. Cabo em osso com espaçador de madeira e virola de latão.',
-    preco: null,
+    preco: 19990,
     fotos: [F('carbono-gaucho-osso')],
   },
   {
@@ -282,7 +282,7 @@ export const PECAS = [
     cabo: 'osso',
     caboRotulo: 'Osso queimado',
     detalhe: 'Cabo em osso com queima decorativa e virola de alumínio.',
-    preco: null,
+    preco: 19990,
     fotos: [F('carbono-osso-queimado')],
   },
   {
@@ -295,7 +295,7 @@ export const PECAS = [
     cabo: 'chifre',
     caboRotulo: 'Chifre',
     detalhe: 'Lâmina com gravação vazada em formato de chama. Cabo em chifre com espaçador de madeira.',
-    preco: null,
+    preco: 19990,
     fotos: [F('carbono-chama-chifre')],
   },
   {
@@ -308,7 +308,7 @@ export const PECAS = [
     cabo: 'osso',
     caboRotulo: 'Osso claro',
     detalhe: 'Lâmina com gravação vazada em formato de chama. Cabo em osso claro com espaçador de madeira.',
-    preco: null,
+    preco: 19990,
     fotos: [F('carbono-chama-osso-claro')],
   },
   {
@@ -321,7 +321,7 @@ export const PECAS = [
     cabo: 'madeira',
     caboRotulo: 'Madeira',
     detalhe: 'Lâmina com acabamento de forja e lombo entalhado. Virola de alumínio.',
-    preco: null,
+    preco: 19990,
     fotos: [F('carbono-madeira-notch-a')],
   },
   {
@@ -334,7 +334,7 @@ export const PECAS = [
     cabo: 'madeira',
     caboRotulo: 'Madeira',
     detalhe: 'Lâmina com acabamento de forja e lombo entalhado. Virola de alumínio.',
-    preco: null,
+    preco: 19990,
     fotos: [F('carbono-madeira-notch-b')],
   },
   {
@@ -347,7 +347,7 @@ export const PECAS = [
     cabo: 'osso',
     caboRotulo: 'Osso',
     detalhe: 'Lâmina com acabamento de forja e lombo entalhado. Virola de alumínio.',
-    preco: null,
+    preco: 19990,
     fotos: [F('carbono-osso-claro')],
   },
   {
@@ -360,7 +360,7 @@ export const PECAS = [
     cabo: 'chifre',
     caboRotulo: 'Chifre',
     detalhe: 'Lâmina com gravação vazada da marca RAM. Cabo em chifre com espaçador de madeira.',
-    preco: null,
+    preco: 19990,
     fotos: [F('carbono-ram-chifre')],
   },
 ];
