@@ -34,8 +34,8 @@ export const CONTATO = {
 
 const F = (nome) => `img/${nome}.webp`;
 
-/* título do cartão: só aço e polegada, ex.: "Faca Inox 8" (203mm)" */
-export const tituloCard = (p) => `Faca ${p.aco === 'inox' ? 'Inox' : 'Carbono'} ${p.lamina}`;
+/* título do cartão: só aço e polegada, sem milimetragem, ex.: "Faca Inox 8"" */
+export const tituloCard = (p) => `Faca ${p.aco === 'inox' ? 'Inox' : 'Carbono'} ${p.polegadas}"`;
 
 /* subtítulo, embaixo do título: cabo e estilo de madeira, ex.: "Madeira imbuia com resina" */
 export const especFmt = (p) => p.caboRotulo;
