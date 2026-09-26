@@ -6,7 +6,7 @@ local e fechando o pedido pelo WhatsApp, sem quebrar nada.
 
 ## Como funciona
 
-O site fica onde está (Vercel) e conversa com o Shopify pela **Storefront API**:
+O site fica onde está (GitHub Pages / Netlify) e conversa com o Shopify pela **Storefront API**:
 
 | O quê | De onde vem |
 |---|---|
@@ -22,11 +22,14 @@ lugar de cadastrar peça, mudar preço e acompanhar venda.
 ## Passo 1 · cadastrar as peças
 
 No painel: **Produtos › Importar**, e suba o arquivo `shopify-produtos.csv`
-que está nesta pasta. Ele já vai com as dez peças, descrições, preços, SKUs e
-as fotos (o Shopify baixa as imagens direto do site, não precisa enviar nada).
+que está nesta pasta. Ele já vai com as 24 peças do catálogo atual, descrições,
+preços, SKUs (iguais ao id de cada peça no site — importante, veja o passo 3)
+e as fotos (o Shopify baixa as imagens direto do site, não precisa enviar nada).
 
 As peças sem preço definido entram como **rascunho**. Coloque o preço e mude
-para "ativo" quando quiser vender.
+para "ativo" quando quiser vender. Esse CSV é gerado a partir de `js/dados.js`
+— se o catálogo do site mudar (peça nova, preço, foto), regenera o CSV antes
+de importar de novo, senão a loja fica desatualizada em relação ao site.
 
 Depois confira, produto por produto: **estoque** (o site mostra "Esgotada"
 quando zera) e **peso**, que entra no cálculo do frete. O CSV chuta 260g.
@@ -50,6 +53,12 @@ cabo:osso           cabo:madeira, cabo:chifre
 
 O CSV já traz tudo isso. Em peça nova, repita o padrão. Sem tag, o site tenta
 adivinhar pelo título, e pode errar.
+
+> **Importante:** o "Handle" de cada linha do CSV (primeira coluna) precisa
+> continuar igual ao id da peça em `js/dados.js` (ex.: `ximango-8-osso`). É
+> assim que o site sabe usar as fotos já tratadas em `img/` em vez das fotos
+> que o Shopify baixaria — se o handle não bater, a peça aparece com a foto
+> que estiver cadastrada lá na Shopify (ou sem foto, se não subir nenhuma).
 
 ## Passo 4 · gerar o token
 
@@ -88,11 +97,12 @@ Depois:
 
 ```bash
 node build.mjs
-vercel deploy --prod --yes --scope leonardo-9204s-projects
+git add -A && git commit -m "Liga o Shopify" && git push
 ```
 
-Pronto. O catálogo, os preços e o estoque passam a vir da loja, e o botão da
-sacola vira "Finalizar compra".
+O push já dispara o deploy (GitHub Pages e Netlify publicam sozinhos a cada
+commit). Pronto. O catálogo, os preços e o estoque passam a vir da loja, e o
+botão da sacola vira "Finalizar compra".
 
 ## O que muda no site quando a loja liga
 
@@ -100,7 +110,11 @@ sacola vira "Finalizar compra".
 - Peça sem estoque aparece marcada como **Esgotada**, em preto e branco, e o
   botão vira um pedido de aviso pelo WhatsApp.
 - A sacola passa a ser o carrinho do Shopify: sobrevive à troca de página e
-  abre o checkout com tudo dentro.
+  abre o checkout com tudo dentro — **o botão "Fechar pedido" deixa de mandar
+  a mensagem pro WhatsApp e passa a abrir o checkout de pagamento do
+  Shopify.** Se quiser continuar fechando pedido pelo WhatsApp mesmo com o
+  Shopify ligado (só pra estoque/preço, sem checkout de cartão), me avisa
+  que a gente ajusta esse comportamento antes de publicar.
 - Peça que não existir na loja simplesmente não aparece no catálogo.
 
 ## Se a loja sair do ar
