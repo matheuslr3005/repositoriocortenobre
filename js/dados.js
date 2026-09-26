@@ -38,7 +38,7 @@ const F = (nome) => `img/${nome}.webp`;
 export const tituloCard = (p) => `Faca ${p.aco === 'inox' ? 'Inox' : 'Carbono'} ${p.polegadas}"`;
 
 /* subtítulo, embaixo do título: cabo e estilo de madeira, ex.: "Madeira imbuia com resina" */
-export const especFmt = (p) => p.caboRotulo;
+export const especFmt = (p) => `Cabo de ${p.caboRotulo.charAt(0).toLowerCase()}${p.caboRotulo.slice(1)}`;
 
 /* página do catálogo onde a peça mora, pra montar o link dela no site */
 export const paginaDe = (p) =>
@@ -145,40 +145,40 @@ export const PECAS = [
   {
     id: 'fulltang-7-madeira-a',
     nome: 'Fulltang 7" · madeira figurada',
-    aco: 'inox',
+    aco: 'carbono',
     modelo: 'fulltang',
     polegadas: 7,
     lamina: '7" (178mm)',
     cabo: 'madeira',
     caboRotulo: 'Madeira figurada',
     detalhe: 'Guarda em latão gravado e bainha de couro inclusa.',
-    preco: 18990,
+    preco: 19990,
     fotos: [F('fulltang-7-d')],
   },
   {
     id: 'fulltang-7-madeira-b',
     nome: 'Fulltang 7" · madeira figurada',
-    aco: 'inox',
+    aco: 'carbono',
     modelo: 'fulltang',
     polegadas: 7,
     lamina: '7" (178mm)',
     cabo: 'madeira',
     caboRotulo: 'Madeira figurada',
     detalhe: 'Guarda em latão gravado e bainha de couro inclusa.',
-    preco: null,
+    preco: 19990,
     fotos: [F('fulltang-7-e')],
   },
   {
     id: 'fulltang-7-madeira-clara',
     nome: 'Fulltang 7" · madeira clara com virola',
-    aco: 'inox',
+    aco: 'carbono',
     modelo: 'fulltang',
     polegadas: 7,
     lamina: '7" (178mm)',
     cabo: 'madeira',
     caboRotulo: 'Madeira clara',
     detalhe: 'Virola de latão e bainha de couro inclusa.',
-    preco: null,
+    preco: 19990,
     fotos: [F('fulltang-7-f')],
   },
   {
