@@ -19,7 +19,7 @@ export function cartaoPeca(p, { etiqueta = true } = {}) {
     ? `<span class="peca-etiqueta ${p.aco}">${p.aco === 'inox' ? 'Inox' : 'Carbono'}</span>`
     : '';
 
-  const esgotada = sacola.modo === 'shopify' && p.variantId && !p.disponivel;
+  const esgotada = (sacola.modo === 'shopify' && p.variantId && !p.disponivel) || (sacola.modo === 'local' && p.disponivel === false);
   const aberta = vendaAberta(p);
   const risco = p.precoDe && p.precoDe > p.preco
     ? `<s style="color:var(--aco);font-size:13px;margin-right:6px">${precoFmt(p.precoDe)}</s>`

@@ -248,7 +248,7 @@ export function abrirFicha(id) {
   if (!p || !painel) return;
 
   const aberta = vendaAberta(p);
-  const esgotada = sacola.modo === 'shopify' && p.variantId && !p.disponivel;
+  const esgotada = (sacola.modo === 'shopify' && p.variantId && !p.disponivel) || (sacola.modo === 'local' && p.disponivel === false);
 
   $('#ficha-conteudo').innerHTML = `
     <p class="kicker" style="margin-bottom:14px">${p.aco === 'inox' ? 'Aço inox' : 'Aço carbono'}</p>
@@ -293,7 +293,7 @@ function ligarFicha() {
 }
 
 function pedirOrcamento(p) {
-  const esgotada = sacola.modo === 'shopify' && p.variantId && !p.disponivel;
+  const esgotada = (sacola.modo === 'shopify' && p.variantId && !p.disponivel) || (sacola.modo === 'local' && p.disponivel === false);
   const texto = esgotada
     ? `Olá! A ${p.nome} está esgotada no site. Me avisa quando sair uma nova da bancada?`
     : `Olá! Quero um orçamento da ${p.nome}${p.lamina ? ` (${p.lamina}` : ''}${p.caboRotulo ? `, cabo em ${p.caboRotulo.toLowerCase()})` : p.lamina ? ')' : ''}.`;

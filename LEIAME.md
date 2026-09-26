@@ -31,6 +31,13 @@ Sem isso, funciona com o catálogo local e fecha o pedido no WhatsApp. O passo a
 passo está em [SHOPIFY.md](SHOPIFY.md), e `shopify-produtos.csv` importa as dez
 peças de uma vez.
 
+## Estoque da Nuvemshop
+
+Independente do Shopify, o site pode marcar peças como esgotadas a partir do
+estoque de verdade cadastrado na Nuvemshop. Uma função agendada
+(`netlify/functions/sync-estoque.mjs`) publica `estoque.json`, que o site lê
+sozinho. Passo a passo em [NUVEMSHOP.md](NUVEMSHOP.md).
+
 ## Onde mexer no conteúdo
 
 | O que | Arquivo |
@@ -59,6 +66,8 @@ css/            base (tokens), app (casca), home, catálogo
 js/             dados, util, shopify, sacola, app, pecas, home, catalogo, gravacao, contato, cuidados
 img/            fotos tratadas em webp
 _fontes/        fotos originais, fora do deploy
+netlify/functions/sync-estoque.mjs   sincroniza o estoque da Nuvemshop (NUVEMSHOP.md)
+estoque.json    gerado pela função acima; não editar à mão
 build.mjs       gerador das páginas
 ```
 
@@ -71,3 +80,4 @@ build.mjs       gerador das páginas
 - Simulador de gravação na lâmina, na página empresarial.
 - Formulários de contato e orçamento que abrem o WhatsApp já escritos, sem backend.
 - Integração com o Shopify: catálogo, estoque, promoções, carrinho e checkout da loja, com volta automática para o modo WhatsApp se a loja não responder.
+- Sincronização de estoque com a Nuvemshop: peça esgotada lá vira "Esgotada" no site, mesmo com pedido pelo WhatsApp.

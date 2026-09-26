@@ -375,6 +375,7 @@ async function buscar() {
   const loja = await import('./shopify.js');
   if (!loja.ativo()) {
     cachePecas = PECAS;
+    await aplicarEstoqueAoVivo(cachePecas);
     return cachePecas;
   }
 
@@ -390,7 +391,26 @@ async function buscar() {
     console.warn('Shopify não respondeu. O site segue com o catálogo local e o pedido pelo WhatsApp.', erro);
     cachePecas = PECAS;
   }
+
+  await aplicarEstoqueAoVivo(cachePecas);
   return cachePecas;
+}
+
+/* Estoque sincronizado da Nuvemshop (netlify/functions/sync-estoque.mjs),
+   publicado como estoque.json na raiz do site. Marca peça por peça quando
+   o SKU (mesmo id do site) está zerado; se o arquivo não existir ainda ou
+   a rede falhar, o catálogo segue normal, sem nenhuma peça esgotada. */
+async function aplicarEstoqueAoVivo(pecas) {
+  try {
+    const resp = await fetch('estoque.json', { cache: 'no-store' });
+    if (!resp.ok) return;
+    const { indisponiveis } = await resp.json();
+    if (!Array.isArray(indisponiveis)) return;
+    const semEstoque = new Set(indisponiveis);
+    pecas.forEach((p) => { if (semEstoque.has(p.id)) p.disponivel = false; });
+  } catch {
+    /* sem estoque.json publicado ainda, ou rede fora do ar: segue sem marcar nada */
+  }
 }
 
 /* true só quando o catálogo veio mesmo da loja: é o que autoriza a sacola a

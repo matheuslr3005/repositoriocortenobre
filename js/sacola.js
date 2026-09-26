@@ -198,4 +198,6 @@ export const sacola = {
 
 /* deixa o resto do catálogo saber se a venda está aberta de verdade */
 export const vendaAberta = (peca) =>
-  sacola.modo === 'shopify' ? Boolean(peca.variantId && peca.disponivel) : Boolean(peca.preco);
+  sacola.modo === 'shopify'
+    ? Boolean(peca.variantId && peca.disponivel)
+    : Boolean(peca.preco) && peca.disponivel !== false;
