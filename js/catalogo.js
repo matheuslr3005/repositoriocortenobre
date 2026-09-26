@@ -105,7 +105,7 @@ async function montar() {
 
   $('#pedir-sob-medida')?.addEventListener('click', () => {
     const partes = [
-      estado.modelo && `modelo ${estado.modelo === 'fulltang' ? 'fulltang' : 'língua de ximango'}`,
+      estado.modelo && `modelo ${estado.modelo === 'fulltang' ? 'fulltang' : 'tradicional'}`,
       estado.polegadas && `lâmina de ${estado.polegadas}"`,
       estado.cabo && `cabo em ${estado.cabo}`,
     ].filter(Boolean);

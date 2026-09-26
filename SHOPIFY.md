@@ -46,7 +46,7 @@ Os filtros do site (modelo, lâmina, cabo) leem as tags do produto, neste format
 
 ```
 aco:inox        ou  aco:carbono
-modelo:fulltang ou  modelo:ximango
+modelo:fulltang ou  modelo:tradicional
 lamina:8            (só o número)
 cabo:osso           cabo:madeira, cabo:chifre
 ```

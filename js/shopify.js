@@ -80,7 +80,7 @@ function deduzir(produto) {
   const polegadas = texto.match(/(\d{1,2})\s*"/)?.[1] || texto.match(/(\d{1,2})\s*polegada/)?.[1];
   return {
     aco: /carbono/.test(texto) ? 'carbono' : 'inox',
-    modelo: /fulltang|full tang|espiga inteira/.test(texto) ? 'fulltang' : 'ximango',
+    modelo: /fulltang|full tang|espiga inteira/.test(texto) ? 'fulltang' : 'tradicional',
     polegadas: polegadas ? Number(polegadas) : null,
     cabo: /osso/.test(texto) ? 'osso' : /chifre/.test(texto) ? 'chifre' : /madeira|imbuia/.test(texto) ? 'madeira' : null,
   };
