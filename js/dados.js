@@ -23,7 +23,7 @@ export const SHOPIFY = {
 };
 
 export const CONTATO = {
-  linkWhatsapp: 'https://w.app/uninqw', // link direto do WhatsApp Business, a conversa continua por lá
+  linkWhatsapp: 'https://wa.me/5551993163033', // link oficial do WhatsApp; precisa ser esse formato pro texto (?text=) funcionar
   whatsappVisivel: '(51) 99316-3033',
   email: 'contato@facascortenobre.com.br',
   instagram: 'https://www.instagram.com/facascortenobre/',
