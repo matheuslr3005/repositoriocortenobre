@@ -12,7 +12,6 @@ addEventListener('DOMContentLoaded', () => {
     ['geral', 'Toda faca'],
     ['carbono', 'Aço carbono'],
     ['inox', 'Aço inox'],
-    ['coloridas', 'Douradas e black'],
   ];
 
   barra.innerHTML = chaves.map(([k, rotulo], i) =>

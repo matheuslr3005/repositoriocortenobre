@@ -339,9 +339,17 @@
   bottom: clamp(24px, 4vw, 44px);
   max-width: min(320px, 42%);
   z-index: 3;
+  opacity: 1;
+  transition: opacity 260ms var(--fio);
 }
 .comparador-texto.esq { left: clamp(20px, 3.4vw, 40px); }
 .comparador-texto.dir { right: clamp(20px, 3.4vw, 40px); text-align: right; }
+/* só o lado que está dominando a imagem mostra o texto */
+.comparador.mostra-carbono .comparador-texto.dir,
+.comparador.mostra-inox .comparador-texto.esq {
+  opacity: 0;
+  pointer-events: none;
+}
 .comparador-texto h3 { font-family: var(--font-display); font-weight: 300; font-size: clamp(24px, 3.2vw, 40px); line-height: 1.06; margin-bottom: 12px; }
 .comparador-texto dl { display: grid; gap: 6px; font-size: 13.5px; color: var(--osso-dim); }
 .comparador-texto dl div { display: flex; gap: 8px; }

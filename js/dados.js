@@ -34,9 +34,11 @@ export const CONTATO = {
 
 const F = (nome) => `img/${nome}.webp`;
 
-/* linha padrão de especificação usada embaixo do nome da peça:
-   "Faca Inox 8" (203mm) · Madeira imbuia com resina" */
-export const especFmt = (p) => `Faca ${p.aco === 'inox' ? 'Inox' : 'Carbono'} ${p.lamina} · ${p.caboRotulo}`;
+/* título do cartão: só aço e polegada, ex.: "Faca Inox 8" (203mm)" */
+export const tituloCard = (p) => `Faca ${p.aco === 'inox' ? 'Inox' : 'Carbono'} ${p.lamina}`;
+
+/* subtítulo, embaixo do título: cabo e estilo de madeira, ex.: "Madeira imbuia com resina" */
+export const especFmt = (p) => p.caboRotulo;
 
 export const PECAS = [
   {
@@ -170,7 +172,7 @@ export const PECAS = [
     fotos: [F('fulltang-7-f')],
   },
   {
-    id: 'carbono-9-chifre',
+    id: 'carbono-9-chifre-a',
     nome: 'Carbono 9" · cabo chifre',
     aco: 'carbono',
     modelo: 'ximango',
@@ -180,7 +182,33 @@ export const PECAS = [
     caboRotulo: 'Chifre escuro',
     detalhe: 'Lâmina forjada com gravação. Cabo em chifre escuro com virola de alumínio.',
     preco: 19990,
-    fotos: [F('carbono-9-b1'), F('carbono-9-b2'), F('carbono-9-b3')],
+    fotos: [F('carbono-9-b1')],
+  },
+  {
+    id: 'carbono-9-chifre-b',
+    nome: 'Carbono 9" · cabo chifre',
+    aco: 'carbono',
+    modelo: 'ximango',
+    polegadas: 9,
+    lamina: '9" (229mm)',
+    cabo: 'chifre',
+    caboRotulo: 'Chifre escuro',
+    detalhe: 'Lâmina forjada com gravação. Cabo em chifre escuro com virola de alumínio.',
+    preco: null,
+    fotos: [F('carbono-9-b2')],
+  },
+  {
+    id: 'carbono-9-chifre-c',
+    nome: 'Carbono 9" · cabo chifre',
+    aco: 'carbono',
+    modelo: 'ximango',
+    polegadas: 9,
+    lamina: '9" (229mm)',
+    cabo: 'chifre',
+    caboRotulo: 'Chifre escuro',
+    detalhe: 'Lâmina forjada com gravação. Cabo em chifre escuro com virola de alumínio.',
+    preco: null,
+    fotos: [F('carbono-9-b3')],
   },
   {
     id: 'carbono-bloco-madeira',
@@ -344,14 +372,6 @@ export const CUIDADOS = {
       { rotulo: 'Oxidação', texto: 'São conhecidas como facas que não enferrujam. Com mau uso ainda assim podem oxidar, porque toda faca tem percentual de carbono na composição.' },
       { rotulo: 'Afiação de 15° a 20°', texto: 'Afie com chaira passando a mesma quantidade de vezes de cada lado, em ângulo de 15° a 20°.' },
       { rotulo: 'Acabamento', texto: 'O inox tem acabamento brilhante e marca com facilidade. Sem prática na afiação, procure um profissional.' },
-    ],
-  },
-  coloridas: {
-    titulo: 'Facas douradas e black fosfatizada',
-    itens: [
-      { rotulo: 'Composição', texto: 'Produzidas em aço inox 420 com tratamento térmico de nitretação.' },
-      { rotulo: 'Uso', texto: 'Não corte objetos com pontas, como carne com osso, para evitar arranhões.' },
-      { rotulo: 'Limpeza', texto: 'Não deixe a lâmina molhada por muito tempo e nunca lave com a parte verde da esponja.' },
     ],
   },
 };

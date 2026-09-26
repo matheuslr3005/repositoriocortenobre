@@ -65,6 +65,9 @@ function comparador() {
     const v = Math.min(94, Math.max(6, pct));
     caixa.style.setProperty('--corte', `${v}%`);
     puxador.setAttribute('aria-valuenow', Math.round(v));
+    /* só mostra o texto do lado que está dominando a imagem no momento */
+    caixa.classList.toggle('mostra-carbono', v >= 50);
+    caixa.classList.toggle('mostra-inox', v < 50);
   };
   por(50);
 
@@ -97,7 +100,6 @@ function abas() {
     ['geral', 'Toda faca'],
     ['carbono', 'Aço carbono'],
     ['inox', 'Aço inox'],
-    ['coloridas', 'Douradas e black'],
   ];
 
   barra.innerHTML = chaves.map(([k, rotulo], i) =>
