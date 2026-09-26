@@ -64,6 +64,7 @@
           <div class="lamina-palco" id="palco">
             <img src="img/gravacao-palco.webp" srcset="img/gravacao-palco@half.webp 700w, img/gravacao-palco.webp 1400w" sizes="(max-width: 900px) 100vw, 50vw" alt="Lâmina forjada pronta para gravação" width="1600" height="542" loading="lazy">
             <span class="gravacao" id="gravacao">Sua marca</span>
+            <img class="gravacao-logo" id="gravacao-logo" alt="Logo simulada na lâmina" hidden>
           </div>
           <p class="legenda" style="margin-top:12px">Gravação a laser na lâmina ou no cabo, conforme a peça escolhida.</p>
         </div>
@@ -73,6 +74,12 @@
             <span>Nome da marca</span>
             <input type="text" id="grav-texto" maxlength="26" value="Sua marca" placeholder="Nome da empresa" autocomplete="off">
           </label>
+
+          <div>
+            <span class="legenda" style="display:block;margin-bottom:10px">Ou envie a logo da empresa</span>
+            <input type="file" id="grav-logo" accept="image/png,image/jpeg,image/webp,image/svg+xml">
+            <button class="btn-ghost" type="button" id="grav-logo-remover" hidden style="margin-top:10px">Remover logo e voltar pro texto</button>
+          </div>
 
           <div>
             <span class="legenda" style="display:block;margin-bottom:10px">Acabamento</span>
@@ -88,8 +95,13 @@
           </div>
 
           <div>
-            <label class="legenda" for="grav-pos" style="display:block;margin-bottom:10px">Posição na lâmina</label>
+            <label class="legenda" for="grav-pos" style="display:block;margin-bottom:10px">Posição na lâmina (ponta ↔ cabo)</label>
             <input class="slider" type="range" id="grav-pos" min="18" max="70" value="42">
+          </div>
+
+          <div>
+            <label class="legenda" for="grav-altura" style="display:block;margin-bottom:10px">Altura na lâmina (cima ↔ baixo)</label>
+            <input class="slider" type="range" id="grav-altura" min="20" max="58" value="38">
           </div>
 
           <div style="border-top:1px solid var(--linha);padding-top:22px">

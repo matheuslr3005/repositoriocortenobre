@@ -40,6 +40,16 @@ export const tituloCard = (p) => `Faca ${p.aco === 'inox' ? 'Inox' : 'Carbono'} 
 /* subtítulo, embaixo do título: cabo e estilo de madeira, ex.: "Madeira imbuia com resina" */
 export const especFmt = (p) => p.caboRotulo;
 
+/* página do catálogo onde a peça mora, pra montar o link dela no site */
+export const paginaDe = (p) =>
+  p.modelo === 'fulltang' ? 'faca-fulltang.html' : p.aco === 'inox' ? 'faca-de-inox.html' : 'faca-de-carbono.html';
+
+/* link direto pra peça (página do catálogo + #id), usado no pedido pelo WhatsApp */
+export const linkDe = (p) => {
+  const diretorio = location.pathname.replace(/[^/]*$/, '');
+  return `${location.origin}${diretorio}${paginaDe(p)}#${p.id}`;
+};
+
 export const PECAS = [
   {
     id: 'ximango-8-osso',
@@ -214,7 +224,7 @@ export const PECAS = [
     id: 'carbono-bloco-madeira',
     nome: 'Faca carbono · cabo bloco de madeira',
     aco: 'carbono',
-    modelo: 'fulltang',
+    modelo: 'ximango',
     polegadas: 9,
     lamina: '9" (229mm)',
     cabo: 'madeira',

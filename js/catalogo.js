@@ -5,6 +5,7 @@
 import { FILTROS, carregarPecas } from './dados.js';
 import { cartaoPeca, ligarGalerias } from './pecas.js';
 import { $, $$, calmo, abrirWhatsapp } from './util.js';
+import { abrirFicha } from './app.js';
 
 async function montar() {
   const grade = $('#grade');
@@ -113,6 +114,10 @@ async function montar() {
   });
 
   aplicar();
+
+  /* link direto pra uma peça (ex.: vindo do pedido no WhatsApp): abre a ficha dela sozinho */
+  const idAlvo = location.hash.slice(1);
+  if (idAlvo && lista.some((p) => p.id === idAlvo)) abrirFicha(idAlvo);
 }
 
 addEventListener('DOMContentLoaded', montar);

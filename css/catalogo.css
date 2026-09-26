@@ -82,7 +82,7 @@
   border: 1px solid var(--linha);
   overflow: hidden;
 }
-.lamina-palco img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.lamina-palco > img:not(.gravacao-logo) { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 .gravacao {
   position: absolute;
   left: 34%;
@@ -97,7 +97,7 @@
   text-shadow: 0 1px 0 rgba(0,0,0,0.55), 0 0 12px rgba(255,255,255,0.28);
   white-space: nowrap;
   pointer-events: none;
-  transition: left 220ms var(--fio), font-size 200ms var(--fio);
+  transition: left 220ms var(--fio), top 220ms var(--fio), font-size 200ms var(--fio);
 
 }
 .gravacao.marcada {
@@ -105,7 +105,26 @@
   color: rgba(24, 21, 16, 0.78);
   text-shadow: 0 1px 0 rgba(255,255,255,0.22);
 }
+.gravacao-logo[hidden] { display: none; }
+.gravacao-logo {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  max-width: 46%;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(1) contrast(1.35) brightness(1.15);
+  mix-blend-mode: overlay;
+  opacity: 0.95;
+  pointer-events: none;
+  transition: left 220ms var(--fio), top 220ms var(--fio), height 200ms var(--fio);
+}
+.gravacao-logo.marcada {
+  mix-blend-mode: multiply;
+  filter: grayscale(1) contrast(1.6);
+  opacity: 0.9;
+}
 .gravador-controles { display: grid; gap: 22px; }
+#grav-logo { font-size: 13px; color: var(--osso-dim); }
 .escolhas { display: flex; gap: 8px; flex-wrap: wrap; }
 .slider { width: 100%; accent-color: var(--brasa); }
 

@@ -5,12 +5,26 @@
    · local    lista guardada no navegador que fecha o pedido no WhatsApp
    O modo é escolhido no arranque, conforme js/dados.js tenha ou não a loja.
    ========================================================================== */
-import { acharPeca, precoFmt, pecasCarregadas, lojaEmPe, especFmt } from './dados.js';
+import { acharPeca, precoFmt, pecasCarregadas, lojaEmPe, especFmt, linkDe } from './dados.js';
 import { avisar, abrirWhatsapp, $, $$ } from './util.js';
 import * as loja from './shopify.js';
 
 const CHAVE = 'cn.sacola.v1';
 const avisa = () => document.dispatchEvent(new CustomEvent('sacola:muda'));
+
+/* item da sacola local, já com o que precisa pro pedido pelo WhatsApp */
+const itemDe = (p, qtd) => ({
+  id: p.id,
+  nome: p.nome,
+  preco: p.preco,
+  qtd,
+  foto: p.fotos[0],
+  detalhe: especFmt(p),
+  aco: p.aco,
+  modelo: p.modelo,
+  lamina: p.lamina,
+  link: linkDe(p),
+});
 
 export const sacola = {
   modo: 'local',
@@ -65,7 +79,7 @@ export const sacola = {
       .filter((i) => acharPeca(i.id))
       .map((i) => {
         const p = acharPeca(i.id);
-        return { id: p.id, nome: p.nome, preco: p.preco, qtd: i.qtd, foto: p.fotos[0], detalhe: especFmt(p) };
+        return itemDe(p, i.qtd);
       });
   },
 
@@ -83,7 +97,7 @@ export const sacola = {
     if (this.modo === 'local') {
       const existente = this.itens.find((i) => i.id === id);
       if (existente) existente.qtd += 1;
-      else this.itens.push({ id, nome: peca.nome, preco: peca.preco, qtd: 1, foto: peca.fotos[0], detalhe: especFmt(peca) });
+      else this.itens.push(itemDe(peca, 1));
       this.gravarNoNavegador();
       this.depois(`${peca.nome} foi para a sacola.`);
       return;
@@ -170,7 +184,13 @@ export const sacola = {
   get temSobConsulta() { return this.itens.some((i) => i.preco == null); },
 
   mensagemWhatsapp() {
-    const linhas = this.itens.map((i) => `• ${i.qtd}x ${i.nome} (${precoFmt(i.preco)})`);
+    const linhas = this.itens.map((i) => {
+      const aco = i.aco ? `Aço ${i.aco === 'inox' ? 'inox' : 'carbono'}` : '';
+      const modelo = i.modelo === 'fulltang' ? 'Fulltang' : '';
+      const specs = [aco, modelo, i.lamina].filter(Boolean).join(' · ');
+      const linkLinha = i.link ? `\n  Link: ${i.link}` : '';
+      return `• ${i.qtd}x ${i.nome}${specs ? `\n  ${specs}` : ''}\n  Valor: ${precoFmt(i.preco)}${linkLinha}`;
+    });
     const total = this.total ? `\nTotal das peças com preço: ${precoFmt(this.total)}` : '';
     const obs = this.temSobConsulta ? '\nTem peça sob consulta na lista.' : '';
     return `Olá! Quero fechar este pedido na Corte Nobre:\n\n${linhas.join('\n')}${total}${obs}`;
